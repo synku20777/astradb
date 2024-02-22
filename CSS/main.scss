@@ -1,9 +1,251 @@
-// Define variables
-$primary-color: #007bff;
-$secondary-color: #6c757d;
-
-// Define styles
-body {
-  background-color: $primary-color;
-  color: $secondary-color;
+@font-face {
+  font-family: Graphik, sans-serif;
+  src: url(../fonts/GraphikRegular.otf) format("opentype");
 }
+
+/* colors */
+$blue: #5f70ea;
+$black: #111114;
+$grey: #898a8d;
+$white: #fff;
+$bgColor: #ededf1;
+/* fonts */
+
+$fontR: Graphik, sans-serif, normal;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: $fontR;
+  background: $bgColor;
+  width: 100%;
+  overflow-x: hidden;
+  color: $black;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  width: 100%;
+  overflow: hidden;
+}
+
+/*- breakpoints -*/
+@mixin devices($breakpoint) {
+  @if $breakpoint ==laptop {
+    @media only screen and (max-width: 1140px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==tablet {
+    @media only screen and (max-width: 912px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==mobile {
+    @media only screen and (max-width: 670px) {
+      @content;
+    }
+  }
+}
+
+/*- Margins n Padding */
+.container {
+  padding-left: 5.2vw;
+  padding-right: 5.2vw;
+
+  @include devices(mobile) {
+    padding-left: 2.6vw;
+    padding-right: 2.6vw;
+  }
+}
+
+@mixin containerV {
+  padding-top: 7.8vw;
+
+  @include devices(tablet) {
+    padding-top: 15vw;
+  }
+
+  @include devices(mobile) {
+    padding-top: 20vw;
+  }
+}
+
+@mixin mT100 {
+  margin-top: 5.2vw;
+
+  @include devices(tablet) {
+    margin-top: 7vw;
+  }
+
+  @include devices(mobile) {
+    margin-top: 12vw;
+  }
+}
+
+@mixin mT50 {
+  margin-top: 2.6vw;
+
+  @include devices(tablet) {
+    margin-top: 5.2vw;
+  }
+
+  @include devices(mobile) {
+    margin-top: 8vw;
+  }
+}
+
+@mixin mT30 {
+  margin-top: 1.56vw;
+
+  @include devices(laptop) {
+    margin-top: 2vw;
+  }
+
+  @include devices(tablet) {
+    margin-top: 4vw;
+  }
+
+  @include devices(mobile) {
+    margin-top: 6vw;
+  }
+}
+
+@mixin mT20 {
+  margin-top: 1.04vw;
+
+  @include devices(laptop) {
+    margin-top: 1.5vw;
+  }
+
+  @include devices(tablet) {
+    margin-top: 3vw;
+  }
+
+  @include devices(mobile) {
+    margin-top: 5vw;
+  }
+}
+
+/*- Buttons -*/
+.button {
+  background: $blue;
+  padding: 0.7vw 1.2vw;
+  border-radius: 50px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  border: none;
+  text-wrap: nowrap;
+
+  @include devices(laptop) {
+    padding: 1vw 1.5vw;
+  }
+
+  @include devices(tablet) {
+    padding: 1.8vw 3.6vw;
+  }
+
+  @include devices(mobile) {
+    padding: 2vw 4vw;
+  }
+
+  a {
+    color: $white;
+    font-size: 0.9vw;
+
+    @include devices(laptop) {
+      font-size: 1.1vw;
+    }
+
+    @include devices(tablet) {
+      font-size: 1.6vw;
+    }
+
+    @include devices(mobile) {
+      font-size: 2.6vw;
+    }
+  }
+}
+
+/*- Flip-Text-hover -*/
+.m-flip {
+  overflow: hidden;
+}
+
+.m-flip_item {
+  display: block;
+  position: relative;
+  top: 0;
+  transition: top 0.5s ease-out 0s;
+}
+
+a {
+  display: block;
+  color: $blue;
+}
+
+.overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: $black;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 90;
+  // pointer-events: none;
+  display: none;
+}
+
+.overlay.active {
+  opacity: 0.5;
+  display: block;
+}
+
+/*- Cursor -*/
+#cursor {
+  width: 0.8vw;
+  height: 0.8vw;
+  background: $blue;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transition: 0.1s ease;
+  z-index: 99999999;
+  mix-blend-mode: difference;
+
+  @include devices(tablet) {
+    display: none;
+  }
+}
+
+/* components */
+@import "font";
+@import "nav";
+@import "hero";
+@import "project";
+@import "about";
+@import "awward";
+@import "footer";
+@import "contact";
+/* pages */
+@import "./pages/about";
+@import "./pages/case";
+@import "./pages/casetemplate";
