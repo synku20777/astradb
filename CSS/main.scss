@@ -237,15 +237,9 @@ a {
 }
 
 /* components */
-@import "font";
+@import "fonts";
 @import "nav";
 @import "hero";
-@import "project";
 @import "about";
-@import "awward";
 @import "footer";
 @import "contact";
-/* pages */
-@import "./pages/about";
-@import "./pages/case";
-@import "./pages/casetemplate";
