@@ -1,0 +1,147 @@
+.services {
+  @include containerV;
+
+  h1 {
+    font-family: $displayM;
+    @include font72;
+  }
+
+  .wrapper {
+    position: relative;
+    @include mT100;
+    display: flex;
+    gap: 13.5vw;
+
+    @include devices(tablet) {
+      flex-direction: column;
+      gap: 5vw;
+    }
+
+    @include devices(mobile) {
+      gap: 7vw;
+    }
+
+    .wrapper_left {
+      position: sticky;
+      top: 0; // Specify the desired position
+      display: block;
+      @include font18;
+      width: 50%;
+    }
+
+    h3 {
+      font-family: $displayM;
+      @include font48;
+    }
+
+    p {
+      @include mT20;
+      @include font20;
+    }
+
+    button {
+      @include mT50;
+    }
+
+    @include devices(tablet) {
+      width: 100%;
+    }
+
+    span {
+      color: $grey;
+    }
+
+    ul {
+      @include mT20;
+
+      li {
+        margin: 0.15vw 0;
+
+        @include devices(laptop) {
+          margin: 0.5vw 0;
+        }
+
+        @include devices(tablet) {
+          margin: 1vw 0;
+        }
+
+        @include devices(mobile) {
+          margin: 2vw 0;
+        }
+      }
+    }
+  }
+
+  .wrapper_right {
+    display: block;
+    width: 80%;
+
+    @include devices(tablet) {
+      width: 100%;
+    }
+
+    h3 {
+      @include font28;
+    }
+    .service {
+      > div:nth-child(n + 2) {
+        @include mT100;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include devices(tablet) {
+          width: 100%;
+        }
+
+        h3 {
+          @include font28;
+          span {
+            font-family: $fontR;
+            color: $white;
+          }
+        }
+      }
+
+      .service {
+        > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+
+      @include devices(mobile) {
+        flex-direction: column;
+        gap: 8vw;
+      }
+
+      p {
+        @include mT20;
+        @include font20;
+        width: 70%;
+
+        @include devices(laptop) {
+          width: 60%;
+        }
+
+        @include devices(mobile) {
+          width: 100%;
+        }
+      }
+
+      a {
+        @include mT30;
+        color: $grey;
+        @include font18;
+
+        @include devices(mobile) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

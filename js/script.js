@@ -25,20 +25,23 @@ window.addEventListener("mousemove", function (dets) {
 
 // text reveal on section
 let totalSection = document.querySelectorAll("section");
-totalSection.forEach(function (elem, index) {
-  const text = new SplitType(elem.querySelector(".animate-heading"));
+totalSection.forEach(function (elem) {
+  const text = new SplitType(elem.querySelectorAll(".animate-text")); // Select all text elements inside the section
   let textwords = text.words;
-  gsap.from(textwords, {
-    scrollTrigger: {
-      trigger: elem,
-      start: "top top",
-      end: "bottom top",
-      markers: true,
-    },
-    duration: 1,
-    opacity: 0,
-    yPercent: 100,
-    ease: Power3.out,
-    stagger: 0.05,
+  textwords.forEach(function (word, index) {
+    gsap.from(word, {
+      scrollTrigger: {
+        trigger: elem,
+        start: "top bottom", // Change the start value to "top bottom"
+        end: "bottom top",
+        // markers: true,
+      },
+      delay: 0.02 * index,
+      duration: 1,
+      opacity: 0,
+      yPercent: 100,
+      ease: Power3.out,
+      stagger: 0.4 * index, // Apply staggered delay based on index
+    });
   });
 });
