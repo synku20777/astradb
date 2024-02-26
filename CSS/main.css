@@ -396,13 +396,14 @@ nav .nav_logo a img {
 .hero {
   display: flex;
   flex-direction: column;
-  padding: 10vw 0.26vw 10vw 5.8vw;
+  padding: 14vw 0.26vw 10vw 5.8vw;
   width: 57rem;
 }
 .hero h1 {
   font-size: 3.75vw;
   letter-spacing: 0.0375rem;
   font-weight: 500;
+  margin-bottom: 2vw;
 }
 @media only screen and (max-width: 912px) {
   .hero h1 {
@@ -416,9 +417,6 @@ nav .nav_logo a img {
   }
 }
 @media only screen and (max-width: 670px) {
-  .hero {
-    width: 913px;
-  }
   .hero h1 {
     font-size: 2.5vw;
     letter-spacing: 0%;
@@ -442,9 +440,21 @@ nav .nav_logo a img {
     font-size: 5.5vw;
   }
 }
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 1140px) {
+  .hero {
+    padding: 14vw 0.26vw 10vw 4vw;
+    width: 40rem;
+  }
+}
+@media only screen and (max-width: 912px) {
   .hero {
     padding: 18vw 0.26vw 10vw 4vw;
-    width: 25rem;
+    width: 35rem;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .hero {
+    padding: 20vw 0.26vw 10vw 4vw;
+    width: 20rem;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -3,19 +3,31 @@
 .hero {
     display: flex;
     flex-direction: column;
-    padding: 10vw 0.26vw 10vw 5.8vw;
+    padding: 14vw 0.26vw 10vw 5.8vw;
     width: 57rem;
 
-    h1 {@include font72}
-    @include devices(mobile){
-        h1 {@include font48}
-        width: 913px;
-
+    h1 {@include font72;
+        margin-bottom: 2vw;
     }
     
-    @include devices(mobile) {
+    @include devices(mobile){
+        h1 {@include font48}
+
+    }
+
+    @include devices(laptop) {
+        padding: 14vw 0.26vw 10vw 4vw;
+        width: 40rem;
+      }
+
+    @include devices(tablet) {
         padding: 18vw 0.26vw 10vw 4vw;
-        width: 25rem;
+        width: 35rem;
+      }
+
+    @include devices(mobile) {
+        padding: 20vw 0.26vw 10vw 4vw;
+        width: 20rem;
       }
 
 }
