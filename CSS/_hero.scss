@@ -1,2 +1,9 @@
 // _hero.scss
 
+.hero {
+    display: flex;
+    h1 {@include font94}
+    @include devices(mobile){
+        h1 {@include font72}
+    }
+}
