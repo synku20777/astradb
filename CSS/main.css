@@ -16,6 +16,12 @@
   font-weight: 300;
   src: url(../fonts/NeueHaasDisplayLight.ttf) format("truetype");
 }
+@font-face {
+  font-family: "FuturaPT";
+  font-style: medium;
+  font-weight: 450;
+  src: url(../fonts/FuturaPTMedium.otf) format("opentype");
+}
 /* colors */
 /* fonts */
 * {
@@ -43,6 +49,7 @@ ul {
 
 section {
   width: 100%;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -435,5 +442,381 @@ nav .nav_logo a img {
 @media only screen and (max-width: 670px) and (max-width: 670px) {
   .hero h1 {
     font-size: 7vw;
+  }
+}
+
+.services {
+  padding-top: 7.8vw;
+}
+@media only screen and (max-width: 912px) {
+  .services {
+    padding-top: 15vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services {
+    padding-top: 20vw;
+  }
+}
+.services h1 {
+  font-family: "FuturaPT", sans-serif, normal;
+  font-size: 3.75vw;
+  letter-spacing: 0.0375rem;
+  font-weight: 500;
+}
+@media only screen and (max-width: 912px) {
+  .services h1 {
+    font-size: 5.5vw;
+    letter-spacing: 0.0375rem;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services h1 {
+    font-size: 7vw;
+  }
+}
+.services .wrapper {
+  position: relative;
+  margin-top: 5.2vw;
+  display: flex;
+  gap: 13.5vw;
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper {
+    margin-top: 7vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper {
+    margin-top: 12vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper {
+    flex-direction: column;
+    gap: 5vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper {
+    gap: 7vw;
+  }
+}
+.services .wrapper .wrapper_left {
+  position: sticky;
+  top: 0;
+  display: block;
+  font-size: 0.9vw;
+  letter-spacing: 0.05rem;
+  width: 50%;
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper .wrapper_left {
+    font-size: 1.1vw;
+    letter-spacing: 0.05rem;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper .wrapper_left {
+    font-size: 1.8vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper .wrapper_left {
+    font-size: 2.6vw;
+  }
+}
+.services .wrapper h3 {
+  font-family: "FuturaPT", sans-serif, normal;
+  font-size: 2.5vw;
+  letter-spacing: 0%;
+  font-weight: 400;
+  line-height: 150%;
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper h3 {
+    font-size: 2.8vw;
+    letter-spacing: 0%;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper h3 {
+    font-size: 3.7vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper h3 {
+    font-size: 5.5vw;
+  }
+}
+.services .wrapper p {
+  margin-top: 1.04vw;
+  font-size: 1.16vw;
+  letter-spacing: -0.25px;
+  line-height: 150%;
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper p {
+    margin-top: 1.5vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper p {
+    margin-top: 3vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper p {
+    margin-top: 5vw;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper p {
+    letter-spacing: 0%;
+    font-size: 1.2vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper p {
+    font-size: 2vw;
+    letter-spacing: 0%;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper p {
+    font-size: 3vw;
+  }
+}
+.services .wrapper button {
+  margin-top: 2.6vw;
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper button {
+    margin-top: 5.2vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper button {
+    margin-top: 8vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper {
+    width: 100%;
+  }
+}
+.services .wrapper span {
+  color: #999;
+}
+.services .wrapper ul {
+  margin-top: 1.04vw;
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper ul {
+    margin-top: 1.5vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper ul {
+    margin-top: 3vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper ul {
+    margin-top: 5vw;
+  }
+}
+.services .wrapper ul li {
+  margin: 0.15vw 0;
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper ul li {
+    margin: 0.5vw 0;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper ul li {
+    margin: 1vw 0;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper ul li {
+    margin: 2vw 0;
+  }
+}
+.services .wrapper_right {
+  display: block;
+  width: 80%;
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper_right {
+    width: 100%;
+  }
+}
+.services .wrapper_right h3 {
+  font-size: 1.45vw;
+  letter-spacing: 0%;
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper_right h3 {
+    font-size: 1.7vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper_right h3 {
+    font-size: 2.8vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper_right h3 {
+    font-size: 3.5vw;
+  }
+}
+.services .wrapper_right .service > div:nth-child(n+2) {
+  margin-top: 5.2vw;
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper_right .service > div:nth-child(n+2) {
+    margin-top: 7vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper_right .service > div:nth-child(n+2) {
+    margin-top: 12vw;
+  }
+}
+.services .wrapper_right .service > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper_right .service > div {
+    width: 100%;
+  }
+}
+.services .wrapper_right .service > div h3 {
+  font-size: 1.45vw;
+  letter-spacing: 0%;
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper_right .service > div h3 {
+    font-size: 1.7vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper_right .service > div h3 {
+    font-size: 2.8vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper_right .service > div h3 {
+    font-size: 3.5vw;
+  }
+}
+.services .wrapper_right .service > div h3 span {
+  font-family: "NeueHaasDisplayRoman", sans-serif, normal;
+  color: #eee;
+}
+.services .wrapper_right .service .service > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper_right .service {
+    flex-direction: column;
+    gap: 8vw;
+  }
+}
+.services .wrapper_right .service p {
+  margin-top: 1.04vw;
+  font-size: 1.16vw;
+  letter-spacing: -0.25px;
+  line-height: 150%;
+  width: 70%;
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper_right .service p {
+    margin-top: 1.5vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper_right .service p {
+    margin-top: 3vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper_right .service p {
+    margin-top: 5vw;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper_right .service p {
+    letter-spacing: 0%;
+    font-size: 1.2vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper_right .service p {
+    font-size: 2vw;
+    letter-spacing: 0%;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper_right .service p {
+    font-size: 3vw;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper_right .service p {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper_right .service p {
+    width: 100%;
+  }
+}
+.services .wrapper_right .service a {
+  margin-top: 1.56vw;
+  color: #999;
+  font-size: 0.9vw;
+  letter-spacing: 0.05rem;
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper_right .service a {
+    margin-top: 2vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper_right .service a {
+    margin-top: 4vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper_right .service a {
+    margin-top: 6vw;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper_right .service a {
+    font-size: 1.1vw;
+    letter-spacing: 0.05rem;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper_right .service a {
+    font-size: 1.8vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper_right .service a {
+    font-size: 2.6vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper_right .service a {
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
