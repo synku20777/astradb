@@ -391,4 +391,49 @@ nav .nav_logo a img {
 .responsive_nav.active {
   transform: translateY(0);
   opacity: 1;
+}
+
+.hero {
+  display: flex;
+}
+.hero h1 {
+  font-size: 4.89vw;
+  letter-spacing: 0.125rem;
+  font-weight: 500;
+}
+@media only screen and (max-width: 1140px) {
+  .hero h1 {
+    font-size: 5vw;
+    letter-spacing: 0.125rem;
+    line-height: 130%;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .hero h1 {
+    font-size: 6.5vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .hero h1 {
+    font-size: 8vw;
+    letter-spacing: 0.05rem;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .hero h1 {
+    font-size: 3.75vw;
+    letter-spacing: 0.0375rem;
+    font-weight: 500;
+  }
+}
+@media only screen and (max-width: 670px) and (max-width: 912px) {
+  .hero h1 {
+    font-size: 5.5vw;
+    letter-spacing: 0.0375rem;
+  }
+}
+@media only screen and (max-width: 670px) and (max-width: 670px) {
+  .hero h1 {
+    font-size: 7vw;
+  }
 }/*# sourceMappingURL=main.css.map */
