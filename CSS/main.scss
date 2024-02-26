@@ -53,7 +53,24 @@ body {
 }
 
 a {
+  display: flex;
+  gap: 0.4vw;
+  color: $grey;
   text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  img {
+    opacity: 0.5;
+    transition: 0.2s ease;
+  }
+
+  &:hover {
+    color: $white;
+    img {
+      opacity: 1;
+    }
+  }
 }
 
 ul {
@@ -63,7 +80,7 @@ ul {
 section {
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 /*- breakpoints -*/
@@ -168,7 +185,11 @@ section {
 
 /*- Buttons -*/
 .button {
-  background: $white;
+  display: flex;
+  gap: 0.8vw;
+  background-color: transparent;
+  color: $white;
+  border: 1px solid $white;
   padding: 0.7vw 1.2vw;
   border-radius: 50px;
   height: -moz-fit-content;
@@ -176,8 +197,16 @@ section {
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
-  border: none;
   text-wrap: nowrap;
+  transition: 0.2s ease;
+
+  &:hover {
+    background-color: $white;
+    color: $black;
+    img {
+      filter: invert(1);
+    }
+  }
 
   @include devices(laptop) {
     padding: 1vw 1.5vw;
@@ -192,7 +221,6 @@ section {
   }
 
   a {
-    color: $white;
     font-size: 0.9vw;
 
     @include devices(laptop) {
@@ -207,41 +235,6 @@ section {
       font-size: 2.6vw;
     }
   }
-}
-
-/*- Flip-Text-hover -*/
-.m-flip {
-  overflow: hidden;
-}
-
-.m-flip_item {
-  display: block;
-  position: relative;
-  top: 0;
-  transition: top 0.5s ease-out 0s;
-}
-
-a {
-  display: block;
-  color: $white;
-}
-
-.overlay {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  background: $black;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 90;
-  // pointer-events: none;
-  display: none;
-}
-
-.overlay.active {
-  opacity: 0.5;
-  display: block;
 }
 
 /*- Cursor -*/

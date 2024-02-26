@@ -22,11 +22,18 @@
     }
 
     .wrapper_left {
-      position: sticky;
-      top: 0; // Specify the desired position
       display: block;
       @include font18;
       width: 50%;
+      height: 100%;
+      z-index: 1; // Add this line to ensure the sticky element is displayed correctly
+      position: sticky;
+      top: 30px;
+
+      @include devices(tablet) {
+        width: 100%;
+        position: fixed;
+      }
     }
 
     h3 {
@@ -41,10 +48,6 @@
 
     button {
       @include mT50;
-    }
-
-    @include devices(tablet) {
-      width: 100%;
     }
 
     span {
@@ -135,7 +138,6 @@
 
       a {
         @include mT30;
-        color: $grey;
         @include font18;
 
         @include devices(mobile) {

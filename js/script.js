@@ -1,5 +1,5 @@
 // underline
-document.querySelectorAll(".nav-item").forEach((item) => {
+document.querySelectorAll(".nav-item ").forEach((item) => {
   item.addEventListener("mouseover", (event) => {
     event.target.classList.add("hovered");
   });
