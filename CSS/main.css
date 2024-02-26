@@ -213,7 +213,7 @@ nav .nav_logo a img {
 }
 .nav_links ul li {
   position: relative;
-  height: 1.5vw;
+  padding: 0.8vh 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -228,7 +228,7 @@ nav .nav_logo a img {
 .nav_links ul li a {
   font-size: 0.9vw;
   letter-spacing: 0.05rem;
-  padding: 0 0.4vw;
+  padding: 0 0.6vw;
   color: #d9d9d9;
 }
 @media only screen and (max-width: 1140px) {
@@ -250,7 +250,7 @@ nav .nav_logo a img {
 .nav_links ul li a a:hover {
   color: #eee;
 }
-.nav_links ul li a::before {
+.nav_links ul li a:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -262,7 +262,7 @@ nav .nav_logo a img {
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
-.nav_links ul li a.hovered::before {
+.nav_links ul li a.hovered:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
