@@ -1,21 +1,23 @@
 // _hero.scss
 
 .hero {
-    display: flex;
-    flex-direction: column;
-    padding: 10vw 0.26vw 10vw 5.8vw;
-    width: 57rem;
+  display: flex;
+  flex-direction: column;
+  padding: 10vw 0.26vw 10vw 5.8vw;
+  width: 57rem;
 
-    h1 {@include font72}
-    @include devices(mobile){
-        h1 {@include font48}
-        width: 913px;
-
+  h1 {
+    @include font72;
+  }
+  @include devices(mobile) {
+    h1 {
+      @include font48;
     }
-    
-    @include devices(mobile) {
-        padding: 18vw 0.26vw 10vw 4vw;
-        width: 25rem;
-      }
+    width: 913px;
+  }
 
+  @include devices(mobile) {
+    padding: 18vw 0.26vw 10vw 4vw;
+    width: 25rem;
+  }
 }
