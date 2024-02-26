@@ -2,8 +2,20 @@
 
 .hero {
     display: flex;
-    h1 {@include font94}
+    flex-direction: column;
+    padding: 10vw 0.26vw 10vw 5.8vw;
+    width: 57rem;
+
+    h1 {@include font72}
     @include devices(mobile){
-        h1 {@include font72}
+        h1 {@include font48}
+        width: 913px;
+
     }
+    
+    @include devices(mobile) {
+        padding: 18vw 0.26vw 10vw 4vw;
+        width: 25rem;
+      }
+
 }
