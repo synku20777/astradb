@@ -1,11 +1,11 @@
 @mixin font94 {
   font-size: 4.89vw;
-  letter-spacing: 2%;
+  letter-spacing: 0.125rem;
   font-weight: 500;
 
   @include devices(laptop) {
     font-size: 5vw;
-    letter-spacing: 2%;
+    letter-spacing: 0.125rem;
     line-height: 130%;
   }
 
@@ -15,18 +15,18 @@
 
   @include devices(mobile) {
     font-size: 8vw;
-    letter-spacing: 4%;
+    letter-spacing: 0.05rem;
   }
 }
 
 @mixin font72 {
   font-size: 3.75vw;
-  letter-spacing: 1%;
+  letter-spacing: 0.0375rem;
   font-weight: 500;
 
   @include devices(tablet) {
     font-size: 5.5vw;
-    letter-spacing: 1%;
+    letter-spacing: 0.0375rem;
   }
 
   @include devices(mobile) {
@@ -112,11 +112,11 @@
 
 @mixin font18 {
   font-size: 0.9vw;
-  letter-spacing: 4%;
+  letter-spacing: 0.05rem;
 
   @include devices(laptop) {
     font-size: 1.1vw;
-    letter-spacing: 4%;
+    letter-spacing: 0.05rem;
   }
 
   @include devices(tablet) {
@@ -130,11 +130,11 @@
 
 @mixin font16 {
   font-size: 0.8vw;
-  letter-spacing: 4%;
+  letter-spacing: 0.05rem;
 
   @include devices(laptop) {
     font-size: 1vw;
-    letter-spacing: 4%;
+    letter-spacing: 0.05rem;
   }
 
   @include devices(tablet) {

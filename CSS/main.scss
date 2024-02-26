@@ -245,6 +245,7 @@ a {
   pointer-events: none;
   transition: 0.1s ease;
   z-index: 99999999;
+  opacity: 0;
   mix-blend-mode: difference;
 
   @include devices(tablet) {

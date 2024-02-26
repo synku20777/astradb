@@ -43,34 +43,16 @@ nav {
   ul {
     height: 100%;
     display: flex;
+    gap: 2.6vw;
     align-items: center;
 
     li {
       position: relative;
-      width: 5.5vw;
-      height: 2.6vw;
+      height: 1.5vw;
       display: flex;
       justify-content: center;
       align-items: center;
       cursor: pointer;
-
-      li::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: $white;
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-      }
-
-      &:hover:after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
 
       @include devices(laptop) {
         width: 6vw;
@@ -79,14 +61,31 @@ nav {
 
       a {
         @include font18;
-        color: $white;
-      }
-    }
-  }
+        padding: 0 0.4vw;
+        color: $offwhite;
 
-  .active {
-    a {
-      color: $white;
+        a:hover {
+          color: $white;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 0.8px;
+          bottom: 0;
+          left: 0;
+          background-color: $white;
+          transform-origin: bottom right;
+          transition: transform 0.3s ease-out;
+        }
+
+        &.hovered::before {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
     }
   }
 }
