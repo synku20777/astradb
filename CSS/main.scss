@@ -1,17 +1,33 @@
 @font-face {
-  font-family: Graphik, sans-serif;
-  src: url(../fonts/GraphikRegular.otf) format("opentype");
+  font-family: "NeueHaasDisplayBold";
+  font-style: bold;
+  font-weight: 700;
+  src: url(../fonts/NeueHaasDisplayBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NeueHaasDisplayRoman";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/NeueHaasDisplayRoman.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NeueHaasDisplayLight";
+  font-style: light;
+  font-weight: 300;
+  src: url(../fonts/NeueHaasDisplayLight.ttf) format("truetype");
 }
 
 /* colors */
-$blue: #5f70ea;
-$black: #111114;
-$grey: #898a8d;
-$white: #fff;
-$bgColor: #ededf1;
+$black: #111;
+$darkgrey: #333;
+$grey: #999;
+$white: #eee;
+$offwhite: #d9d9d9;
 /* fonts */
 
-$fontR: Graphik, sans-serif, normal;
+$fontB: "NeueHaasDisplayBold", sans-serif, bold;
+$fontR: "NeueHaasDisplayRoman", sans-serif, normal;
+$fontL: "NeueHaasDisplayLight", sans-serif, light;
 
 * {
   margin: 0;
@@ -21,11 +37,11 @@ $fontR: Graphik, sans-serif, normal;
 
 html,
 body {
-  font-family: $fontR;
-  background: $bgColor;
+  font-family: $fontL;
+  background: $black;
   width: 100%;
   overflow-x: hidden;
-  color: $black;
+  color: $white;
 }
 
 a {
@@ -143,7 +159,7 @@ section {
 
 /*- Buttons -*/
 .button {
-  background: $blue;
+  background: $white;
   padding: 0.7vw 1.2vw;
   border-radius: 50px;
   height: -moz-fit-content;
@@ -198,7 +214,7 @@ section {
 
 a {
   display: block;
-  color: $blue;
+  color: $white;
 }
 
 .overlay {
@@ -223,12 +239,13 @@ a {
 #cursor {
   width: 0.8vw;
   height: 0.8vw;
-  background: $blue;
+  background: $white;
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
   transition: 0.1s ease;
   z-index: 99999999;
+  opacity: 0;
   mix-blend-mode: difference;
 
   @include devices(tablet) {
@@ -239,9 +256,7 @@ a {
 /* components */
 @import "fonts";
 @import "nav";
-@import "hero";
-@import "about";
-@import "footer";
-@import "contact";
-// import hero.scss
-@import '_hero'
+// @import "hero";
+// @import "about";
+// @import "footer";
+// @import "contact";
