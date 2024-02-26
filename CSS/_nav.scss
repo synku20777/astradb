@@ -48,7 +48,7 @@ nav {
 
     li {
       position: relative;
-      height: 1.5vw;
+      padding: 0.8vh 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -61,14 +61,14 @@ nav {
 
       a {
         @include font18;
-        padding: 0 0.4vw;
+        padding: 0 0.6vw;
         color: $offwhite;
 
         a:hover {
           color: $white;
         }
 
-        &::before {
+        &:after {
           content: "";
           position: absolute;
           width: 100%;
@@ -81,7 +81,7 @@ nav {
           transition: transform 0.3s ease-out;
         }
 
-        &.hovered::before {
+        &.hovered:after {
           transform: scaleX(1);
           transform-origin: bottom left;
         }
