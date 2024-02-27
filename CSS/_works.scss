@@ -1,6 +1,7 @@
 .works {
   @include containerV;
   background-color: $darkgrey;
+  height: 100vh;
 
   h1 {
     font-family: $displayM;
@@ -9,11 +10,12 @@
 
   .wrapper {
     @include mT100;
-    position: relative;
+    position: absolute;
     display: flex;
     gap: 13.5vw;
 
     @include devices(tablet) {
+      position: static;
       flex-direction: column;
       gap: 5vw;
     }
@@ -23,13 +25,19 @@
     }
 
     .wrapper_left {
+      position: sticky;
       display: block;
       @include font18;
       width: 35%;
       height: 100%;
-      z-index: 1; // Add this line to ensure the sticky element is displayed correctly
+      // z-index: 1; // Add this line to ensure the sticky element is displayed correctly
       position: sticky;
-      top: 30px;
+      top: 100px;
+
+      @include devices(tablet) {
+        width: 100%;
+        position: static;
+      }
 
       .tags {
         @include mT30;
@@ -53,12 +61,16 @@
           width: -moz-fit-content;
           width: fit-content;
           text-wrap: nowrap;
+
+          @include devices(tablet) {
+            padding: 0.8vh 1vh;
+          }
         }
       }
 
       @include devices(tablet) {
         width: 100%;
-        position: fixed;
+        position: static;
       }
 
       h3 {
@@ -103,13 +115,26 @@
     .wrapper_right {
       display: block;
       width: 80%;
+      height: 100vh;
+      overflow: hidden;
 
       @include devices(tablet) {
         width: 100%;
       }
 
-      h3 {
-        @include font28;
+      .frame {
+        position: relative;
+        top: 0;
+        width: fit-content;
+        z-index: 1;
+        overflow: hidden;
+
+        .render {
+          position: relative;
+          display: flex;
+          justify-content: center; // Add this line to center the content horizontally
+          align-items: center; // Add this line to center the content vertically
+        }
       }
     }
   }

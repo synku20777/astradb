@@ -1,40 +1,31 @@
 .services {
   @include containerV;
   padding-bottom: 4.16vw;
+  height: 160vh;
 
   h1 {
     font-family: $displayM;
     @include font72;
   }
 
+  @include devices(tablet) {
+    height: min-content;
+  }
+
   .wrapper {
-    position: relative;
+    position: absolute;
     @include mT100;
     display: flex;
     gap: 13.5vw;
 
     @include devices(tablet) {
+      position: static;
       flex-direction: column;
       gap: 5vw;
     }
 
     @include devices(mobile) {
       gap: 7vw;
-    }
-
-    .wrapper_left {
-      display: block;
-      @include font18;
-      width: 50%;
-      height: 100%;
-      z-index: 1; // Add this line to ensure the sticky element is displayed correctly
-      position: sticky;
-      top: 30px;
-
-      @include devices(tablet) {
-        width: 100%;
-        position: fixed;
-      }
     }
 
     h3 {
@@ -45,6 +36,15 @@
     p {
       @include mT20;
       @include font20;
+      width: 95%;
+
+      @include devices(laptop) {
+        width: 60%;
+      }
+
+      @include devices(mobile) {
+        width: 100%;
+      }
     }
 
     button {
@@ -74,75 +74,87 @@
         }
       }
     }
-  }
 
-  .wrapper_right {
-    display: block;
-    width: 80%;
+    .wrapper_left {
+      position: sticky;
+      display: block;
+      @include font18;
+      width: 50%;
+      height: 100%;
+      top: 100px;
 
-    @include devices(tablet) {
-      width: 100%;
+      @include devices(tablet) {
+        width: 100%;
+        position: static;
+      }
     }
 
-    h3 {
-      @include font28;
-    }
-    .service {
-      > div:nth-child(n + 2) {
-        @include mT100;
+    .wrapper_right {
+      position: static;
+      display: block;
+      width: 80%;
+
+      @include devices(tablet) {
+        width: 100%;
       }
 
-      > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        @include devices(tablet) {
-          width: 100%;
-        }
-
-        h3 {
-          @include font28;
-          span {
-            font-family: $fontR;
-            color: $white;
-          }
+      h3 {
+        @include font28;
+        span {
+          font-family: $fontR;
+          color: $white;
         }
       }
-
       .service {
+        > div:nth-child(n + 2) {
+          @include mT100;
+        }
+
         > div {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-        }
-      }
 
-      @include devices(mobile) {
-        flex-direction: column;
-        gap: 8vw;
-      }
+          @include devices(tablet) {
+            @include mT100;
+            width: 100%;
+          }
 
-      p {
-        @include mT20;
-        @include font20;
-        width: 70%;
-
-        @include devices(laptop) {
-          width: 60%;
+          h3 {
+            @include font28;
+            span {
+              font-family: $fontR;
+              color: $white;
+            }
+          }
         }
 
         @include devices(mobile) {
-          width: 100%;
+          flex-direction: column;
+          gap: 8vw;
         }
-      }
 
-      a {
-        @include mT30;
-        @include font18;
+        p {
+          @include mT20;
+          @include font20;
+          width: 95%;
 
-        @include devices(mobile) {
-          width: 100%;
+          @include devices(laptop) {
+            width: 60%;
+          }
+
+          @include devices(mobile) {
+            width: 100%;
+          }
+        }
+
+        a {
+          @include mT30;
+          @include font18;
+
+          @include devices(mobile) {
+            width: 100%;
+          }
         }
       }
     }

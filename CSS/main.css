@@ -537,6 +537,7 @@ nav .nav_logo a img {
 .services {
   padding-top: 3.8vw;
   padding-bottom: 4.16vw;
+  height: 160vh;
 }
 @media only screen and (max-width: 912px) {
   .services {
@@ -565,8 +566,14 @@ nav .nav_logo a img {
     font-size: 7vw;
   }
 }
+@media only screen and (max-width: 912px) {
+  .services {
+    height: -moz-min-content;
+    height: min-content;
+  }
+}
 .services .wrapper {
-  position: relative;
+  position: absolute;
   margin-top: 5.2vw;
   display: flex;
   gap: 13.5vw;
@@ -583,6 +590,7 @@ nav .nav_logo a img {
 }
 @media only screen and (max-width: 912px) {
   .services .wrapper {
+    position: static;
     flex-direction: column;
     gap: 5vw;
   }
@@ -590,38 +598,6 @@ nav .nav_logo a img {
 @media only screen and (max-width: 670px) {
   .services .wrapper {
     gap: 7vw;
-  }
-}
-.services .wrapper .wrapper_left {
-  display: block;
-  font-size: 0.9vw;
-  letter-spacing: 0.05rem;
-  width: 50%;
-  height: 100%;
-  z-index: 1;
-  position: sticky;
-  top: 30px;
-}
-@media only screen and (max-width: 1140px) {
-  .services .wrapper .wrapper_left {
-    font-size: 1.1vw;
-    letter-spacing: 0.05rem;
-  }
-}
-@media only screen and (max-width: 912px) {
-  .services .wrapper .wrapper_left {
-    font-size: 1.8vw;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .services .wrapper .wrapper_left {
-    font-size: 2.6vw;
-  }
-}
-@media only screen and (max-width: 912px) {
-  .services .wrapper .wrapper_left {
-    width: 100%;
-    position: fixed;
   }
 }
 .services .wrapper h3 {
@@ -652,6 +628,7 @@ nav .nav_logo a img {
   font-size: 1.16vw;
   letter-spacing: -0.25px;
   line-height: 150%;
+  width: 95%;
 }
 @media only screen and (max-width: 1140px) {
   .services .wrapper p {
@@ -683,6 +660,16 @@ nav .nav_logo a img {
 @media only screen and (max-width: 670px) {
   .services .wrapper p {
     font-size: 3vw;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper p {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper p {
+    width: 100%;
   }
 }
 .services .wrapper button {
@@ -737,178 +724,220 @@ nav .nav_logo a img {
     margin: 2vw 0;
   }
 }
-.services .wrapper_right {
+.services .wrapper .wrapper_left {
+  position: sticky;
   display: block;
-  width: 80%;
-}
-@media only screen and (max-width: 912px) {
-  .services .wrapper_right {
-    width: 100%;
-  }
-}
-.services .wrapper_right h3 {
-  font-size: 1.45vw;
-  letter-spacing: 0%;
-}
-@media only screen and (max-width: 1140px) {
-  .services .wrapper_right h3 {
-    font-size: 1.7vw;
-  }
-}
-@media only screen and (max-width: 912px) {
-  .services .wrapper_right h3 {
-    font-size: 2.8vw;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .services .wrapper_right h3 {
-    font-size: 3.5vw;
-  }
-}
-.services .wrapper_right .service > div:nth-child(n+2) {
-  margin-top: 5.2vw;
-}
-@media only screen and (max-width: 912px) {
-  .services .wrapper_right .service > div:nth-child(n+2) {
-    margin-top: 7vw;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .services .wrapper_right .service > div:nth-child(n+2) {
-    margin-top: 12vw;
-  }
-}
-.services .wrapper_right .service > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-@media only screen and (max-width: 912px) {
-  .services .wrapper_right .service > div {
-    width: 100%;
-  }
-}
-.services .wrapper_right .service > div h3 {
-  font-size: 1.45vw;
-  letter-spacing: 0%;
-}
-@media only screen and (max-width: 1140px) {
-  .services .wrapper_right .service > div h3 {
-    font-size: 1.7vw;
-  }
-}
-@media only screen and (max-width: 912px) {
-  .services .wrapper_right .service > div h3 {
-    font-size: 2.8vw;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .services .wrapper_right .service > div h3 {
-    font-size: 3.5vw;
-  }
-}
-.services .wrapper_right .service > div h3 span {
-  font-family: "NeueHaasDisplayRoman", sans-serif, normal;
-  color: #eee;
-}
-.services .wrapper_right .service .service > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-@media only screen and (max-width: 670px) {
-  .services .wrapper_right .service {
-    flex-direction: column;
-    gap: 8vw;
-  }
-}
-.services .wrapper_right .service p {
-  margin-top: 1.04vw;
-  font-size: 1.16vw;
-  letter-spacing: -0.25px;
-  line-height: 150%;
-  width: 70%;
-}
-@media only screen and (max-width: 1140px) {
-  .services .wrapper_right .service p {
-    margin-top: 1.5vw;
-  }
-}
-@media only screen and (max-width: 912px) {
-  .services .wrapper_right .service p {
-    margin-top: 3vw;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .services .wrapper_right .service p {
-    margin-top: 5vw;
-  }
-}
-@media only screen and (max-width: 1140px) {
-  .services .wrapper_right .service p {
-    letter-spacing: 0%;
-    font-size: 1.2vw;
-  }
-}
-@media only screen and (max-width: 912px) {
-  .services .wrapper_right .service p {
-    font-size: 2vw;
-    letter-spacing: 0%;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .services .wrapper_right .service p {
-    font-size: 3vw;
-  }
-}
-@media only screen and (max-width: 1140px) {
-  .services .wrapper_right .service p {
-    width: 60%;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .services .wrapper_right .service p {
-    width: 100%;
-  }
-}
-.services .wrapper_right .service a {
-  margin-top: 1.56vw;
   font-size: 0.9vw;
   letter-spacing: 0.05rem;
+  width: 50%;
+  height: 100%;
+  top: 100px;
 }
 @media only screen and (max-width: 1140px) {
-  .services .wrapper_right .service a {
-    margin-top: 2vw;
-  }
-}
-@media only screen and (max-width: 912px) {
-  .services .wrapper_right .service a {
-    margin-top: 4vw;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .services .wrapper_right .service a {
-    margin-top: 6vw;
-  }
-}
-@media only screen and (max-width: 1140px) {
-  .services .wrapper_right .service a {
+  .services .wrapper .wrapper_left {
     font-size: 1.1vw;
     letter-spacing: 0.05rem;
   }
 }
 @media only screen and (max-width: 912px) {
-  .services .wrapper_right .service a {
+  .services .wrapper .wrapper_left {
     font-size: 1.8vw;
   }
 }
 @media only screen and (max-width: 670px) {
-  .services .wrapper_right .service a {
+  .services .wrapper .wrapper_left {
+    font-size: 2.6vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper .wrapper_left {
+    width: 100%;
+    position: static;
+  }
+}
+.services .wrapper .wrapper_right {
+  position: static;
+  display: block;
+  width: 80%;
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper .wrapper_right {
+    width: 100%;
+  }
+}
+.services .wrapper .wrapper_right h3 {
+  font-size: 1.45vw;
+  letter-spacing: 0%;
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper .wrapper_right h3 {
+    font-size: 1.7vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper .wrapper_right h3 {
+    font-size: 2.8vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper .wrapper_right h3 {
+    font-size: 3.5vw;
+  }
+}
+.services .wrapper .wrapper_right h3 span {
+  font-family: "NeueHaasDisplayRoman", sans-serif, normal;
+  color: #eee;
+}
+.services .wrapper .wrapper_right .service > div:nth-child(n+2) {
+  margin-top: 5.2vw;
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper .wrapper_right .service > div:nth-child(n+2) {
+    margin-top: 7vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper .wrapper_right .service > div:nth-child(n+2) {
+    margin-top: 12vw;
+  }
+}
+.services .wrapper .wrapper_right .service > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper .wrapper_right .service > div {
+    margin-top: 5.2vw;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 912px) and (max-width: 912px) {
+  .services .wrapper .wrapper_right .service > div {
+    margin-top: 7vw;
+  }
+}
+@media only screen and (max-width: 912px) and (max-width: 670px) {
+  .services .wrapper .wrapper_right .service > div {
+    margin-top: 12vw;
+  }
+}
+.services .wrapper .wrapper_right .service > div h3 {
+  font-size: 1.45vw;
+  letter-spacing: 0%;
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper .wrapper_right .service > div h3 {
+    font-size: 1.7vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper .wrapper_right .service > div h3 {
+    font-size: 2.8vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper .wrapper_right .service > div h3 {
+    font-size: 3.5vw;
+  }
+}
+.services .wrapper .wrapper_right .service > div h3 span {
+  font-family: "NeueHaasDisplayRoman", sans-serif, normal;
+  color: #eee;
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper .wrapper_right .service {
+    flex-direction: column;
+    gap: 8vw;
+  }
+}
+.services .wrapper .wrapper_right .service p {
+  margin-top: 1.04vw;
+  font-size: 1.16vw;
+  letter-spacing: -0.25px;
+  line-height: 150%;
+  width: 95%;
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper .wrapper_right .service p {
+    margin-top: 1.5vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper .wrapper_right .service p {
+    margin-top: 3vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper .wrapper_right .service p {
+    margin-top: 5vw;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper .wrapper_right .service p {
+    letter-spacing: 0%;
+    font-size: 1.2vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper .wrapper_right .service p {
+    font-size: 2vw;
+    letter-spacing: 0%;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper .wrapper_right .service p {
+    font-size: 3vw;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper .wrapper_right .service p {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper .wrapper_right .service p {
+    width: 100%;
+  }
+}
+.services .wrapper .wrapper_right .service a {
+  margin-top: 1.56vw;
+  font-size: 0.9vw;
+  letter-spacing: 0.05rem;
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper .wrapper_right .service a {
+    margin-top: 2vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper .wrapper_right .service a {
+    margin-top: 4vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper .wrapper_right .service a {
+    margin-top: 6vw;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .services .wrapper .wrapper_right .service a {
+    font-size: 1.1vw;
+    letter-spacing: 0.05rem;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .services .wrapper .wrapper_right .service a {
+    font-size: 1.8vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .services .wrapper .wrapper_right .service a {
     font-size: 2.6vw;
   }
 }
 @media only screen and (max-width: 670px) {
-  .services .wrapper_right .service a {
+  .services .wrapper .wrapper_right .service a {
     width: 100%;
   }
 }
@@ -916,6 +945,7 @@ nav .nav_logo a img {
 .works {
   padding-top: 3.8vw;
   background-color: #333;
+  height: 100vh;
 }
 @media only screen and (max-width: 912px) {
   .works {
@@ -946,7 +976,7 @@ nav .nav_logo a img {
 }
 .works .wrapper {
   margin-top: 5.2vw;
-  position: relative;
+  position: absolute;
   display: flex;
   gap: 13.5vw;
 }
@@ -962,6 +992,7 @@ nav .nav_logo a img {
 }
 @media only screen and (max-width: 912px) {
   .works .wrapper {
+    position: static;
     flex-direction: column;
     gap: 5vw;
   }
@@ -972,14 +1003,14 @@ nav .nav_logo a img {
   }
 }
 .works .wrapper .wrapper_left {
+  position: sticky;
   display: block;
   font-size: 0.9vw;
   letter-spacing: 0.05rem;
   width: 35%;
   height: 100%;
-  z-index: 1;
   position: sticky;
-  top: 30px;
+  top: 100px;
 }
 @media only screen and (max-width: 1140px) {
   .works .wrapper .wrapper_left {
@@ -995,6 +1026,12 @@ nav .nav_logo a img {
 @media only screen and (max-width: 670px) {
   .works .wrapper .wrapper_left {
     font-size: 2.6vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .works .wrapper .wrapper_left {
+    width: 100%;
+    position: static;
   }
 }
 .works .wrapper .wrapper_left .tags {
@@ -1053,9 +1090,14 @@ nav .nav_logo a img {
   }
 }
 @media only screen and (max-width: 912px) {
+  .works .wrapper .wrapper_left .tags .tag {
+    padding: 0.8vh 1vh;
+  }
+}
+@media only screen and (max-width: 912px) {
   .works .wrapper .wrapper_left {
     width: 100%;
-    position: fixed;
+    position: static;
   }
 }
 .works .wrapper .wrapper_left h3 {
@@ -1174,28 +1216,25 @@ nav .nav_logo a img {
 .works .wrapper .wrapper_right {
   display: block;
   width: 80%;
+  height: 100vh;
+  overflow: hidden;
 }
 @media only screen and (max-width: 912px) {
   .works .wrapper .wrapper_right {
     width: 100%;
   }
 }
-.works .wrapper .wrapper_right h3 {
-  font-size: 1.45vw;
-  letter-spacing: 0%;
+.works .wrapper .wrapper_right .frame {
+  position: relative;
+  top: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 1;
+  overflow: hidden;
 }
-@media only screen and (max-width: 1140px) {
-  .works .wrapper .wrapper_right h3 {
-    font-size: 1.7vw;
-  }
-}
-@media only screen and (max-width: 912px) {
-  .works .wrapper .wrapper_right h3 {
-    font-size: 2.8vw;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .works .wrapper .wrapper_right h3 {
-    font-size: 3.5vw;
-  }
+.works .wrapper .wrapper_right .frame .render {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
