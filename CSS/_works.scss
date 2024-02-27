@@ -1,0 +1,116 @@
+.works {
+  @include containerV;
+  background-color: $darkgrey;
+
+  h1 {
+    font-family: $displayM;
+    @include font72;
+  }
+
+  .wrapper {
+    @include mT100;
+    position: relative;
+    display: flex;
+    gap: 13.5vw;
+
+    @include devices(tablet) {
+      flex-direction: column;
+      gap: 5vw;
+    }
+
+    @include devices(mobile) {
+      gap: 7vw;
+    }
+
+    .wrapper_left {
+      display: block;
+      @include font18;
+      width: 35%;
+      height: 100%;
+      z-index: 1; // Add this line to ensure the sticky element is displayed correctly
+      position: sticky;
+      top: 30px;
+
+      .tags {
+        @include mT30;
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: var(--Spacers-Whitespace-xs, 0.5rem);
+        align-self: stretch;
+        flex-wrap: wrap;
+
+        .tag {
+          @include font16;
+          display: flex;
+          gap: 0.8vw;
+          background-color: $whitesurfaceinv;
+          color: $white;
+          padding: 0.4vw 0.6vw;
+          border-radius: 50px;
+          height: -moz-fit-content;
+          height: fit-content;
+          width: -moz-fit-content;
+          width: fit-content;
+          text-wrap: nowrap;
+        }
+      }
+
+      @include devices(tablet) {
+        width: 100%;
+        position: fixed;
+      }
+
+      h3 {
+        font-family: $displayM;
+        @include font48;
+      }
+
+      p {
+        @include mT20;
+        @include font20;
+      }
+
+      button {
+        @include mT50;
+      }
+
+      span {
+        color: $grey;
+      }
+
+      ul {
+        @include mT20;
+
+        li {
+          margin: 0.15vw 0;
+
+          @include devices(laptop) {
+            margin: 0.5vw 0;
+          }
+
+          @include devices(tablet) {
+            margin: 1vw 0;
+          }
+
+          @include devices(mobile) {
+            margin: 2vw 0;
+          }
+        }
+      }
+    }
+
+    .wrapper_right {
+      display: block;
+      width: 80%;
+
+      @include devices(tablet) {
+        width: 100%;
+      }
+
+      h3 {
+        @include font28;
+      }
+    }
+  }
+}

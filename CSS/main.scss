@@ -30,6 +30,7 @@ $darkgrey: #333;
 $grey: #999;
 $white: #eee;
 $offwhite: #d9d9d9;
+$whitesurfaceinv: rgba(255, 255, 255, 0.2);
 
 /* fonts */
 $displayM: "FuturaPT", sans-serif, normal;
@@ -41,6 +42,8 @@ $fontL: "NeueHaasDisplayLight", sans-serif, light;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  webkit-font-smoothing: auto;
+  font-smooth: auto;
 }
 
 html,
@@ -116,7 +119,7 @@ section {
 }
 
 @mixin containerV {
-  padding-top: 7.8vw;
+  padding-top: 3.8vw;
 
   @include devices(tablet) {
     padding-top: 15vw;
@@ -258,8 +261,8 @@ section {
 /* components */
 @import "fonts";
 @import "nav";
-@import "hero";
 @import "footer";
+@import "hero";
 @import "services";
-// @import "footer";
+@import "works";
 // @import "contact";

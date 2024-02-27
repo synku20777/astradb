@@ -24,24 +24,46 @@ window.addEventListener("mousemove", function (dets) {
 });
 
 // text reveal on section
-let totalSection = document.querySelectorAll("section");
-totalSection.forEach(function (elem) {
-  const text = new SplitType(elem.querySelectorAll(".animate-text")); // Select all text elements inside the section
-  let textwords = text.words;
-  textwords.forEach(function (word, index) {
-    gsap.from(word, {
-      scrollTrigger: {
-        trigger: elem,
-        start: "top bottom", // Change the start value to "top bottom"
-        end: "bottom top",
-        // markers: true,
-      },
-      delay: 0.02 * index,
-      duration: 1,
-      opacity: 0,
-      yPercent: 100,
-      ease: Power3.out,
-      stagger: 0.4 * index, // Apply staggered delay based on index
-    });
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5,
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const text = new SplitType(
+        entry.target.querySelectorAll(".animate-text")
+      );
+      let textwords = text.words;
+      textwords.forEach(function (word, index) {
+        gsap.from(word, {
+          delay: 0.02 * index,
+          duration: 1,
+          opacity: 0,
+          yPercent: 100,
+          ease: Power3.out,
+          stagger: 0.4 * index,
+        });
+      });
+      observer.unobserve(entry.target);
+    }
   });
+}, options);
+
+let totalSection = document.querySelectorAll("section");
+totalSection.forEach((elem) => {
+  observer.observe(elem);
 });
+
+// smooth scroll
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+// create the smooth scroller FIRST!
+let smoother = ScrollSmoother.create({
+  smooth: 2,
+  effects: true,
+  normalizeScroll: true,
+});
+
+ScrollTrigger.normalizeScroll(true);
