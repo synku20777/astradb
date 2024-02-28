@@ -403,6 +403,7 @@ nav .nav_logo a img {
   align-items: top;
   padding-bottom: 4.16vw;
   gap: 4rem;
+  z-index: 1;
 }
 @media only screen and (max-width: 912px) {
   .footer {
@@ -946,8 +947,15 @@ nav .nav_logo a img {
 
 .works {
   padding-top: 3.8vw;
+  font-size: 0.9vw;
+  letter-spacing: 0.05rem;
   background-color: #333;
-  height: 100vh;
+  height: -moz-min-content;
+  height: min-content;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 200vh;
 }
 @media only screen and (max-width: 912px) {
   .works {
@@ -957,6 +965,22 @@ nav .nav_logo a img {
 @media only screen and (max-width: 670px) {
   .works {
     padding-top: 20vw;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .works {
+    font-size: 1.1vw;
+    letter-spacing: 0.05rem;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .works {
+    font-size: 1.8vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .works {
+    font-size: 2.6vw;
   }
 }
 .works h1 {
@@ -979,8 +1003,8 @@ nav .nav_logo a img {
 .works .wrapper {
   margin-top: 5.2vw;
   position: absolute;
+  width: 100%;
   display: flex;
-  gap: 13.5vw;
 }
 @media only screen and (max-width: 912px) {
   .works .wrapper {
@@ -992,27 +1016,15 @@ nav .nav_logo a img {
     margin-top: 12vw;
   }
 }
-@media only screen and (max-width: 912px) {
-  .works .wrapper {
-    position: static;
-    flex-direction: column;
-    gap: 5vw;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .works .wrapper {
-    gap: 7vw;
-  }
-}
 .works .wrapper .wrapper_left {
-  position: sticky;
-  display: block;
   font-size: 0.9vw;
-  letter-spacing: 0.05rem;
-  width: 40%;
-  height: 100%;
+  letter-spacing: 0.05rem; /* For Safari */
   position: sticky;
-  top: 100px;
+  top: 100px; /* Adjust this value as needed */
+  display: block;
+  width: 40%;
+  height: -moz-min-content;
+  height: min-content;
 }
 @media only screen and (max-width: 1140px) {
   .works .wrapper .wrapper_left {
@@ -1028,6 +1040,67 @@ nav .nav_logo a img {
 @media only screen and (max-width: 670px) {
   .works .wrapper .wrapper_left {
     font-size: 2.6vw;
+  }
+}
+.works .wrapper .wrapper_left h3 {
+  font-family: "FuturaPT", sans-serif, normal;
+  font-size: 2.5vw;
+  letter-spacing: 0%;
+  font-weight: 400;
+  line-height: 150%;
+}
+@media only screen and (max-width: 1140px) {
+  .works .wrapper .wrapper_left h3 {
+    font-size: 2.8vw;
+    letter-spacing: 0%;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .works .wrapper .wrapper_left h3 {
+    font-size: 3.7vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .works .wrapper .wrapper_left h3 {
+    font-size: 5.5vw;
+  }
+}
+.works .wrapper .wrapper_left p {
+  margin-top: 1.04vw;
+  font-size: 1.16vw;
+  letter-spacing: -0.25px;
+  line-height: 150%;
+}
+@media only screen and (max-width: 1140px) {
+  .works .wrapper .wrapper_left p {
+    margin-top: 1.5vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .works .wrapper .wrapper_left p {
+    margin-top: 3vw;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .works .wrapper .wrapper_left p {
+    margin-top: 5vw;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .works .wrapper .wrapper_left p {
+    letter-spacing: 0%;
+    font-size: 1.2vw;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .works .wrapper .wrapper_left p {
+    font-size: 2vw;
+    letter-spacing: 0%;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .works .wrapper .wrapper_left p {
+    font-size: 3vw;
   }
 }
 @media only screen and (max-width: 912px) {
@@ -1096,170 +1169,90 @@ nav .nav_logo a img {
     padding: 0.8vh 1vh;
   }
 }
-.works .wrapper .wrapper_left .gradient .text-cover {
-  background: linear-gradient(180deg, rgba(252, 227, 143, 0) 0%, #fce38f 100%);
-  flex: 1 0 0px;
-  height: 1px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-@media only screen and (max-width: 912px) {
-  .works .wrapper .wrapper_left {
-    width: 100%;
-    position: static;
-  }
-}
-.works .wrapper .wrapper_left h3 {
-  font-family: "FuturaPT", sans-serif, normal;
-  font-size: 2.5vw;
-  letter-spacing: 0%;
-  font-weight: 400;
-  line-height: 150%;
-}
-@media only screen and (max-width: 1140px) {
-  .works .wrapper .wrapper_left h3 {
-    font-size: 2.8vw;
-    letter-spacing: 0%;
-  }
-}
-@media only screen and (max-width: 912px) {
-  .works .wrapper .wrapper_left h3 {
-    font-size: 3.7vw;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .works .wrapper .wrapper_left h3 {
-    font-size: 5.5vw;
-  }
-}
-.works .wrapper .wrapper_left p {
-  margin-top: 1.04vw;
-  font-size: 1.16vw;
-  letter-spacing: -0.25px;
-  line-height: 150%;
-}
-@media only screen and (max-width: 1140px) {
-  .works .wrapper .wrapper_left p {
-    margin-top: 1.5vw;
-  }
-}
-@media only screen and (max-width: 912px) {
-  .works .wrapper .wrapper_left p {
-    margin-top: 3vw;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .works .wrapper .wrapper_left p {
-    margin-top: 5vw;
-  }
-}
-@media only screen and (max-width: 1140px) {
-  .works .wrapper .wrapper_left p {
-    letter-spacing: 0%;
-    font-size: 1.2vw;
-  }
-}
-@media only screen and (max-width: 912px) {
-  .works .wrapper .wrapper_left p {
-    font-size: 2vw;
-    letter-spacing: 0%;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .works .wrapper .wrapper_left p {
-    font-size: 3vw;
-  }
-}
-.works .wrapper .wrapper_left button {
-  margin-top: 2.6vw;
-}
-@media only screen and (max-width: 912px) {
-  .works .wrapper .wrapper_left button {
-    margin-top: 5.2vw;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .works .wrapper .wrapper_left button {
-    margin-top: 8vw;
-  }
-}
-.works .wrapper .wrapper_left span {
-  color: #999;
-}
-.works .wrapper .wrapper_left ul {
-  margin-top: 1.04vw;
-}
-@media only screen and (max-width: 1140px) {
-  .works .wrapper .wrapper_left ul {
-    margin-top: 1.5vw;
-  }
-}
-@media only screen and (max-width: 912px) {
-  .works .wrapper .wrapper_left ul {
-    margin-top: 3vw;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .works .wrapper .wrapper_left ul {
-    margin-top: 5vw;
-  }
-}
-.works .wrapper .wrapper_left ul li {
-  margin: 0.15vw 0;
-}
-@media only screen and (max-width: 1140px) {
-  .works .wrapper .wrapper_left ul li {
-    margin: 0.5vw 0;
-  }
-}
-@media only screen and (max-width: 912px) {
-  .works .wrapper .wrapper_left ul li {
-    margin: 1vw 0;
-  }
-}
-@media only screen and (max-width: 670px) {
-  .works .wrapper .wrapper_left ul li {
-    margin: 2vw 0;
-  }
-}
 .works .wrapper .wrapper_right {
   display: block;
-  width: 80%;
-  height: 100vh;
-  overflow: hidden;
-}
-@media only screen and (max-width: 912px) {
-  .works .wrapper .wrapper_right {
-    width: 100%;
-  }
-}
-.works .wrapper .wrapper_right .frame {
+  flex: none;
   position: relative;
+  overflow: hidden;
+  height: 132vh;
   width: -moz-fit-content;
   width: fit-content;
-  border-radius: 35px;
-  z-index: 1;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 41px;
 }
-.works .wrapper .wrapper_right .frame img {
+.works .wrapper .wrapper_right .frame {
+  flex: none;
+  left: -8px;
+  width: -moz-min-content;
+  width: min-content;
+  height: -moz-min-content;
+  height: min-content;
+  overflow: hidden;
+  opacity: 1;
+}
+.works .wrapper .wrapper_right .frame .iphone-wrapper {
+  min-width: 300px;
+}
+.works .wrapper .wrapper_right .frame .iphone-wrapper .iphone-frame {
+  position: absolute;
+  -o-object-position: center;
+     object-position: center;
+  height: -moz-min-content;
+  height: min-content;
+  -o-object-fit: cover;
+     object-fit: cover;
+  image-rendering: auto;
+  justify-content: center;
+  z-index: 1;
+}
+.works .wrapper .wrapper_right .frame .iphone-wrapper .iphone-frame img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  opacity: 0;
-  scale: 0.2;
   transition: all 0.5s ease-in-out;
 }
-.works .wrapper .wrapper_right .frame .render {
+.works .wrapper .wrapper_right .frame .iphone-wrapper .render {
+  min-width: 300px;
   position: absolute;
-  top: 0;
-  margin: auto;
+  padding-top: 12px;
   display: flex;
   justify-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.works .gradient {
+  position: relative;
+  align-content: center;
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0px;
+  height: 140vh;
+  justify-content: center;
+  padding: 0;
+  width: 43%;
+}
+.works .gradient .linear-gradient {
+  font-size: 12px;
+  font-family: sans-serif;
+  --framer-aspect-ratio-supported: auto;
+  box-sizing: border-box;
+  -webkit-font-smoothing: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #333 100%);
+  flex: 1 0 0px;
+  height: 1px;
+  overflow: hidden;
+  width: 100%;
+}
+.works .gradient .text-cover {
+  background-color: #333;
+  flex: none;
+  height: 25vh;
+  overflow: hidden;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

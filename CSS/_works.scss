@@ -1,7 +1,186 @@
+// .works {
+//   @include containerV;
+//   background-color: $darkgrey;
+//   height: 100vh;
+
+//   h1 {
+//     font-family: $displayM;
+//     @include font72;
+//   }
+
+//   .wrapper {
+//     @include mT100;
+//     position: absolute;
+//     display: flex;
+//     gap: 13.5vw;
+//     // overflow: hidden;
+
+//     @include devices(tablet) {
+//       position: static;
+//       flex-direction: column;
+//       gap: 5vw;
+//     }
+
+//     @include devices(mobile) {
+//       gap: 7vw;
+//     }
+
+//     .wrapper_left {
+//       position: sticky;
+//       display: block;
+//       @include font18;
+//       width: 40%;
+//       height: 100%;
+//       // z-index: 1; // Add this line to ensure the sticky element is displayed correctly
+//       position: sticky;
+//       top: 100px;
+
+//       @include devices(tablet) {
+//         width: 100%;
+//         position: static;
+//       }
+
+//       .tags {
+//         @include mT30;
+//         display: flex;
+//         align-items: flex-start;
+//         align-content: flex-start;
+//         gap: var(--Spacers-Whitespace-xs, 0.5rem);
+//         align-self: stretch;
+//         flex-wrap: wrap;
+
+//         .tag {
+//           @include font16;
+//           display: flex;
+//           gap: 0.8vw;
+//           background-color: $whitesurfaceinv;
+//           color: $white;
+//           padding: 0.4vw 0.6vw;
+//           border-radius: 50px;
+//           height: -moz-fit-content;
+//           height: fit-content;
+//           width: -moz-fit-content;
+//           width: fit-content;
+//           text-wrap: nowrap;
+
+//           @include devices(tablet) {
+//             padding: 0.8vh 1vh;
+//           }
+//         }
+//       }
+//       .gradient {
+//         .text-cover {
+//           background: linear-gradient(
+//             180deg,
+//             rgba(255, 255, 255, 0.2),
+//             #333 100%
+//           );
+//           flex: 1 0 0px;
+//           height: 1px;
+//           overflow: hidden;
+//           position: relative;
+//           width: 100%;
+//         }
+//       }
+
+//       @include devices(tablet) {
+//         width: 100%;
+//         position: static;
+//       }
+
+//       h3 {
+//         font-family: $displayM;
+//         @include font48;
+//       }
+
+//       p {
+//         @include mT20;
+//         @include font20;
+//       }
+
+//       button {
+//         @include mT50;
+//       }
+
+//       span {
+//         color: $grey;
+//       }
+
+//       ul {
+//         @include mT20;
+
+//         li {
+//           margin: 0.15vw 0;
+
+//           @include devices(laptop) {
+//             margin: 0.5vw 0;
+//           }
+
+//           @include devices(tablet) {
+//             margin: 1vw 0;
+//           }
+
+//           @include devices(mobile) {
+//             margin: 2vw 0;
+//           }
+//         }
+//       }
+//     }
+
+//     .wrapper_right {
+//       display: block;
+//       width: 80%;
+//       height: 100vh;
+//       overflow: hidden;
+
+//       @include devices(tablet) {
+//         width: 100%;
+//       }
+
+//       .frame {
+//         position: relative;
+//         width: fit-content;
+//         border-radius: 35px;
+//         z-index: 1;
+//         overflow: hidden;
+//         display: flex;
+//         justify-content: center; // center horizontally
+//         align-items: center; // center vertically
+
+//         img {
+//           width: 100%;
+//           height: 100%;
+//           object-fit: cover;
+//           object-position: center;
+//           opacity: 0;
+//           scale: 0.2;
+//           transition: all 0.5s ease-in-out;
+//         }
+
+//         .render {
+//           position: absolute;
+//           top: 0;
+//           margin: auto;
+//           display: flex;
+//           justify-content: center;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// new styles
+//----------------------------------------------------------------
 .works {
   @include containerV;
+  @include font18;
+  // position: relative;
   background-color: $darkgrey;
-  height: 100vh;
+  height: min-content;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 200vh;
 
   h1 {
     font-family: $displayM;
@@ -11,29 +190,30 @@
   .wrapper {
     @include mT100;
     position: absolute;
+    // padding-bottom: 4.16vw;
+
+    width: 100%;
     display: flex;
-    gap: 13.5vw;
     // overflow: hidden;
 
-    @include devices(tablet) {
-      position: static;
-      flex-direction: column;
-      gap: 5vw;
-    }
-
-    @include devices(mobile) {
-      gap: 7vw;
-    }
-
     .wrapper_left {
-      position: sticky;
-      display: block;
       @include font18;
-      width: 40%;
-      height: 100%;
-      // z-index: 1; // Add this line to ensure the sticky element is displayed correctly
+      position: -webkit-sticky; /* For Safari */
       position: sticky;
-      top: 100px;
+      top: 100px; /* Adjust this value as needed */
+      display: block;
+      width: 40%;
+      height: min-content;
+
+      h3 {
+        font-family: $displayM;
+        @include font48;
+      }
+
+      p {
+        @include mT20;
+        @include font20;
+      }
 
       @include devices(tablet) {
         width: 100%;
@@ -68,103 +248,107 @@
           }
         }
       }
-      .gradient {
-        .text-cover {
-          background: linear-gradient(
-            180deg,
-            rgba(252, 227, 143, 0) 0%,
-            #fce38f 100%
-          );
-          flex: 1 0 0px;
-          height: 1px;
-          overflow: hidden;
-          position: relative;
-          width: 100%;
-        }
-      }
-
-      @include devices(tablet) {
-        width: 100%;
-        position: static;
-      }
-
-      h3 {
-        font-family: $displayM;
-        @include font48;
-      }
-
-      p {
-        @include mT20;
-        @include font20;
-      }
-
-      button {
-        @include mT50;
-      }
-
-      span {
-        color: $grey;
-      }
-
-      ul {
-        @include mT20;
-
-        li {
-          margin: 0.15vw 0;
-
-          @include devices(laptop) {
-            margin: 0.5vw 0;
-          }
-
-          @include devices(tablet) {
-            margin: 1vw 0;
-          }
-
-          @include devices(mobile) {
-            margin: 2vw 0;
-          }
-        }
-      }
     }
 
     .wrapper_right {
       display: block;
-      width: 80%;
-      height: 100vh;
+      flex: none;
+      position: relative;
       overflow: hidden;
-
-      @include devices(tablet) {
-        width: 100%;
-      }
+      height: 132vh;
+      // left: 40%;
+      width: fit-content;
+      // z-index: 1;
+      border-radius: 41px;
 
       .frame {
-        position: relative;
-        width: fit-content;
-        border-radius: 35px;
-        z-index: 1;
+        flex: none;
+        left: -8px;
+        width: min-content;
+        height: min-content;
         overflow: hidden;
-        display: flex;
-        justify-content: center; // center horizontally
-        align-items: center; // center vertically
+        // position: absolute;
+        opacity: 1;
 
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-          opacity: 0;
-          scale: 0.2;
-          transition: all 0.5s ease-in-out;
-        }
+        // transform: perspective(1200px) translateY(-50%) translateX(0px)
+        //   translateY(-131.75px) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg)
+        //   translateZ(0px);
 
-        .render {
-          position: absolute;
-          top: 0;
-          margin: auto;
-          display: flex;
-          justify-content: center;
+        .iphone-wrapper {
+          // display: flex;
+          // flex-direction: column;
+          // height: 600px;
+          min-width: 300px;
+
+          .iphone-frame {
+            position: absolute;
+            // display: flex;
+            object-position: center;
+            height: min-content;
+            object-fit: cover;
+            image-rendering: auto;
+            justify-content: center; // Add this line
+            z-index: 1;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+              // scale: 0.2;
+              transition: all 0.5s ease-in-out;
+            }
+          }
+          .render {
+            min-width: 300px;
+            position: absolute;
+            padding-top: 12px;
+            display: flex;
+            justify-content: center;
+            justify-content: center;
+            align-items: center;
+          }
         }
       }
+    }
+  }
+  .gradient {
+    position: relative;
+    align-content: center;
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0px;
+    height: 140vh;
+    justify-content: center;
+    padding: 0;
+    width: 43%;
+    // z-index: 0;
+
+    .linear-gradient {
+      font-size: 12px;
+      font-family: sans-serif;
+      --framer-aspect-ratio-supported: auto;
+      box-sizing: border-box;
+      -webkit-font-smoothing: inherit;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #333 100%);
+      flex: 1 0 0px;
+      height: 1px;
+      overflow: hidden;
+      // position: relative;
+      width: 100%;
+    }
+
+    .text-cover {
+      background-color: #333;
+      flex: none;
+      height: 25vh;
+      overflow: hidden;
+      // position: relative;
+      width: 100%;
     }
   }
 }
