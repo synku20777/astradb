@@ -59,11 +59,11 @@ totalSection.forEach((elem) => {
 
 // smooth scroll
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-// create the smooth scroller FIRST!
-let smoother = ScrollSmoother.create({
-  smooth: 2,
-  effects: true,
-  normalizeScroll: true,
-});
 
-ScrollTrigger.normalizeScroll(true);
+const smoother = ScrollSmoother.create({
+  smooth: 2,
+  speed: 2,
+  effects: true,
+  // normalizeScroll: true,
+  smoothTouch: 0.1,
+});
