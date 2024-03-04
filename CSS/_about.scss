@@ -1,0 +1,84 @@
+//  about
+
+.about {
+  @include containerV;
+  padding-bottom: 4.16vw;
+  height: min-content;
+
+  h1 {
+    font-family: $displayM;
+    @include font72;
+  }
+
+  .grid-4 {
+    @include mT100;
+    grid-template-rows: auto auto;
+    grid-auto-columns: 1fr;
+    display: grid;
+    grid-column-gap: 0.38em;
+    grid-row-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    .grid-midsection {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      grid-area: span 1 / span 2 / span 1 / span 2;
+      // text-wrap: nowrap;
+      text-align: center;
+
+      h3 {
+        font-family: $displayM;
+        @include font48;
+      }
+
+      p {
+        text-align: center;
+        @include font28;
+      }
+
+      button {
+        @include mT50;
+      }
+
+      @include devices(tablet) {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+    }
+
+    .grid-card {
+      background-color: $darkgrey;
+      width: 100%;
+      height: 22vw;
+      border-radius: 1.1em;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      padding: 2.5em 2.5em 2.69em;
+      display: flex;
+      grid-area: span 1 / span 1 / span 1 / span 1;
+
+      @include devices(tablet) {
+        min-height: 30vw;
+        height: 100%;
+      }
+    }
+    @include devices(tablet) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      grid-auto-columns: 1fr;
+      grid-column-gap: 0.38em;
+      grid-row-gap: 1em;
+      grid-template-areas:
+        "1 2"
+        "3 4"
+        "5 6";
+    }
+  }
+
+  @include devices(tablet) {
+    min-height: min-content;
+    padding-bottom: 0;
+  }
+}
