@@ -64,17 +64,30 @@ totalSection.forEach((elem) => {
 });
 
 // smooth scroll
-gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".render", {
-  y: "-50%",
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".render",
-    start: "top bottom", // when the top of the trigger hits the bottom of the viewport
-    end: "bottom top", // when the bottom of the trigger hits the top of the viewport
-    scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-    pin: true, // pins the element for the duration of the scroll
-    pinSpacing: false, // disables automatic adjustment of pin spacing
+// parallax scroll for .render
+const works = document.querySelector(".works");
+const render = works.querySelector(".render");
+
+const intersectionObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY >= works.offsetTop) {
+            const scrollPosition = window.scrollY - works.offsetTop;
+            render.querySelector("img").style.transform = `translateY(-${
+              scrollPosition * 1.2
+            }px)`;
+          } else {
+            render.querySelector("img").style.transform = "translateY(0)";
+          }
+        });
+        observer.unobserve(entry.target);
+      }
+    });
   },
-});
+  { root: null, rootMargin: "0px", threshold: 0 }
+);
+
+intersectionObserver.observe(works);
