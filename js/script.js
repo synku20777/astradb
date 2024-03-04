@@ -91,3 +91,32 @@ const intersectionObserver = new IntersectionObserver(
 );
 
 intersectionObserver.observe(works);
+
+// parallax scroll for desktop .render
+const desktopWrapper = document.querySelector(".desktop-wrapper");
+const desktopRender = desktopWrapper.querySelector(".render");
+
+const desktopObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY >= desktopWrapper.offsetTop) {
+            const scrollPosition = window.scrollY - works.offsetTop;
+            desktopRender.querySelector("img").style.transform = `translateY(-${
+              scrollPosition * 0.4
+            }px)`;
+          } else {
+            desktopRender.querySelector("img").style.transform =
+              "translateY(0)";
+          }
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { root: null, rootMargin: "0px", threshold: 0 }
+);
+
+// Start observing when the .desktop-wrapper enters the viewport
+desktopObserver.observe(desktopWrapper);

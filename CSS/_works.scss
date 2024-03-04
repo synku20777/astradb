@@ -20,6 +20,7 @@
     width: 100%;
     height: 100%;
     display: flex;
+    gap: 1vw;
     // overflow: hidden; !doesn't work
 
     .wrapper_left {
@@ -78,13 +79,11 @@
 
     .wrapper_right {
       display: flex;
-      grid-area: 10vh;
-      flex: none;
       position: relative;
       overflow: hidden;
       height: 100%;
-      width: -moz-fit-content;
-      width: fit-content;
+      width: auto;
+      gap: 3vw;
 
       .frame {
         // position: relative;
@@ -127,8 +126,83 @@
             top: 0;
           }
         }
+        .desktop-wrapper {
+          position: relative;
+          height: min-content;
+          display: flex;
+          min-width: 300px;
+          display: flex;
+          justify-content: center;
+          justify-content: center;
+          align-items: center;
+          padding-top: 6vw;
+
+          .desktop-frame {
+            position: relative;
+            object-position: center;
+            height: min-content;
+            object-fit: cover;
+            image-rendering: auto;
+            justify-content: center;
+            z-index: 1;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+          }
+          .render {
+            position: absolute;
+            // z-index: 1;
+            height: 100%;
+          }
+
+          @include devices(mobile) {
+            display: none;
+          }
+        }
+      }
+      .gradient {
+        position: relative;
+        align-content: center;
+        align-items: center;
+        top: 250px;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+        justify-content: center;
+        padding: 0;
+        width: 43%;
+        // z-index: 0;
+
+        .linear-gradient {
+          background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 0%,
+            #333 100%
+          );
+          flex: 1 0 0px;
+          height: 100%;
+          overflow: hidden;
+          // position: relative;
+          width: 100%;
+        }
+
+        .text-cover {
+          position: relative;
+          background-color: #333;
+          flex: none;
+          height: 20vh;
+          overflow: hidden;
+          // position: relative;
+          width: 100%;
+        }
       }
     }
+
     @include devices(tablet) {
       position: static;
       flex-direction: column;
@@ -139,36 +213,8 @@
       gap: 7vw;
     }
   }
-  .gradient {
-    position: relative;
-    align-content: center;
-    align-items: center;
-    top: 250px;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    padding: 0;
-    width: 43%;
-    // z-index: 0;
 
-    .linear-gradient {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #333 100%);
-      flex: 1 0 0px;
-      height: 100%;
-      overflow: hidden;
-      // position: relative;
-      width: 100%;
-    }
-
-    .text-cover {
-      background-color: #333;
-      flex: none;
-      height: 35vh;
-      overflow: hidden;
-      // position: relative;
-      width: 100%;
-    }
+  @include devices(mobile) {
+    min-height: 160vh;
   }
 }
