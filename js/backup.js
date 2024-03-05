@@ -28,13 +28,18 @@ intersectionObserver.observe(works);
 const desktopWrapper = document.querySelector(".desktop-wrapper");
 const desktopRender = desktopWrapper.querySelector(".render");
 
+let parentContainer = desktopWrapper.parentElement;
+while (!parentContainer.classList.contains("container")) {
+  parentContainer = parentContainer.parentElement;
+}
+
 const desktopObserver = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        window.addEventListener("scroll", function () {
-          if (window.scrollY >= desktopWrapper.offsetTop) {
-            const scrollPosition = window.scrollY - works.offsetTop;
+        const scrollHandler = function () {
+          if (window.scrollY >= parentContainer.offsetTop) {
+            const scrollPosition = window.scrollY - parentContainer.offsetTop;
             desktopRender.querySelector("img").style.transform = `translateY(-${
               scrollPosition * 0.4
             }px)`;
@@ -42,7 +47,8 @@ const desktopObserver = new IntersectionObserver(
             desktopRender.querySelector("img").style.transform =
               "translateY(0)";
           }
-        });
+        };
+        window.addEventListener("scroll", scrollHandler);
         observer.unobserve(entry.target);
       }
     });

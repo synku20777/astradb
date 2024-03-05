@@ -71,7 +71,7 @@ const intersectionObserver = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const render = entry.target.querySelector(".render");
+        const Iphonerender = entry.target.querySelector(".render");
         let parentContainer = entry.target.parentElement;
         while (!parentContainer.classList.contains("container")) {
           parentContainer = parentContainer.parentElement;
@@ -79,11 +79,11 @@ const intersectionObserver = new IntersectionObserver(
         const scrollHandler = function () {
           if (window.scrollY >= parentContainer.offsetTop) {
             const scrollPosition = window.scrollY - parentContainer.offsetTop;
-            render.querySelector("img").style.transform = `translateY(-${
-              scrollPosition * 1.2
+            Iphonerender.querySelector("img").style.transform = `translateY(-${
+              scrollPosition * 1.1025
             }px)`;
           } else {
-            render.querySelector("img").style.transform = "translateY(0)";
+            Iphonerender.querySelector("img").style.transform = "translateY(0)";
           }
         };
         window.addEventListener("scroll", scrollHandler);
@@ -99,23 +99,22 @@ iphoneWrappers.forEach((wrapper) => {
 });
 
 // parallax scroll for desktop .render
-const desktopWrapper = document.querySelector(".desktop-wrapper");
-const desktopRender = desktopWrapper.querySelector(".render");
-
-let parentContainer = desktopWrapper.parentElement;
-while (!parentContainer.classList.contains("container")) {
-  parentContainer = parentContainer.parentElement;
-}
+const desktopWrappers = document.querySelectorAll(".desktop-wrapper");
 
 const desktopObserver = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        const desktopRender = entry.target.querySelector(".render");
+        let parentContainer = entry.target.parentElement;
+        while (!parentContainer.classList.contains("container")) {
+          parentContainer = parentContainer.parentElement;
+        }
         const scrollHandler = function () {
           if (window.scrollY >= parentContainer.offsetTop) {
             const scrollPosition = window.scrollY - parentContainer.offsetTop;
             desktopRender.querySelector("img").style.transform = `translateY(-${
-              scrollPosition * 0.4
+              scrollPosition * 0.2
             }px)`;
           } else {
             desktopRender.querySelector("img").style.transform =
@@ -130,5 +129,6 @@ const desktopObserver = new IntersectionObserver(
   { root: null, rootMargin: "0px", threshold: 0 }
 );
 
-// Start observing when the .desktop-wrapper enters the viewport
-desktopObserver.observe(desktopWrapper);
+desktopWrappers.forEach((wrapper) => {
+  desktopObserver.observe(wrapper);
+});

@@ -7,7 +7,7 @@
   justify-content: center;
   overflow: hidden;
   width: 100%;
-  height: 120vh;
+  height: 130vh;
 
   h1 {
     font-family: $displayM;
@@ -17,6 +17,7 @@
   .wrapper {
     @include mT100;
     position: absolute;
+    max-width: 94.8vw;
     width: 100%;
     height: 100%;
     display: flex;
@@ -29,6 +30,7 @@
       position: sticky;
       top: 100px; /* Adjust this value as needed */
       display: block;
+      min-width: 39%;
       width: 40%;
       height: min-content;
 
@@ -82,14 +84,11 @@
       position: relative;
       overflow: hidden;
       height: 100%;
-      width: auto;
       gap: 3vw;
 
       .frame {
-        // position: relative;
-        width: min-content;
-        height: min-content;
-        // overflow: hidden;
+        width: -moz-fit-content;
+        width: fit-content;
         height: min-content;
 
         .iphone-wrapper {
@@ -122,12 +121,14 @@
           }
           .render {
             overflow: hidden;
-            border-radius: 42px 42px 0 0;
+            border-radius: 2vh;
+            // padding-top: 13px;
+            max-width: 96%;
             position: absolute;
-            // padding-top: 15px;
-            top: 0;
+            top: 11px;
 
             img {
+              border-radius: 1vh;
               width: 100%;
               height: 100%;
               object-fit: cover;
@@ -140,6 +141,7 @@
           height: min-content;
           display: flex;
           min-width: 300px;
+          max-width: 680px;
           display: flex;
           justify-content: center;
           justify-content: center;
@@ -147,6 +149,7 @@
           padding-top: 6vw;
 
           .desktop-frame {
+            width: 100%;
             position: relative;
             object-position: center;
             height: min-content;
@@ -163,9 +166,21 @@
             }
           }
           .render {
+            max-width: 96%;
             position: absolute;
             // z-index: 1;
             height: 100%;
+
+            img {
+              border-radius: 1vh;
+              width: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+          }
+
+          @include devices(tablet) {
+            width: auto;
           }
 
           @include devices(mobile) {
@@ -193,33 +208,27 @@
     position: relative;
     align-content: center;
     align-items: center;
-    top: 250px;
-    bottom: 0;
     display: flex;
     flex-direction: column;
-    height: 70%;
-    justify-content: center;
-    padding: 0;
-    width: 44%;
-    // z-index: 0;
+    top: 35vh;
+    height: 80%;
+    justify-content: flex-end;
+    width: 42%;
+    // z-index: 1;
 
     .linear-gradient {
+      // position: block;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #333 100%);
-      flex: 1 0 0px;
-      height: 100%;
-      overflow: hidden;
-      // position: relative;
+      height: 70%;
       width: 100%;
     }
 
     .text-cover {
-      position: relative;
+      // position: block;
       background-color: #333;
-      flex: none;
-      height: 20vh;
-      overflow: hidden;
-      // position: relative;
+      height: 25vh;
       width: 100%;
+      // z-index: 1;
     }
   }
 }
