@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /css/
-Disallow: /assets/
+Disallow: 
