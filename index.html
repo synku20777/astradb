@@ -21,6 +21,37 @@
   <body>
     <!-- cursor -->
     <div id="cursor"></div>
+    <!-- responsive nav -->
+    <div class="responsive_nav">
+      <div class="close">
+        <img src="assets\icons\Cross 1.svg" alt="escape" srcset="" />
+      </div>
+      <div class="resLinks">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#cases">Cases</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        <div class="social">
+          <p>Social</p>
+          <ul>
+            <li>
+              <a href="#">Instagram</a>
+            </li>
+            <li>
+              <a href="#">Behance</a>
+            </li>
+            <li>
+              <a href="#">LinkedIn</a>
+            </li>
+            <li>
+              <a href="#">Github</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
     <nav class="container">
       <div class="nav_logo">
         <a href="index.html">
@@ -31,7 +62,7 @@
         <ul>
           <!-- <li class="active"><a href="index.html">Home</a></li> -->
           <li><a class="nav-item" href="">Services</a></li>
-          <li><a class="nav-item" href="">Works</a></li>
+          <li><a class="nav-item" href="">Cases</a></li>
           <li><a class="nav-item" href="">About</a></li>
         </ul>
       </div>
@@ -56,7 +87,7 @@
       <video src="">Showcase</video>
     </section>
     <!-- Services -->
-    <section class="services container">
+    <section id="services" class="services container">
       <h1 id="animate-text">Services</h1>
       <div class="wrapper">
         <div class="wrapper_left">
@@ -129,7 +160,7 @@
       </div>
     </section>
     <!-- Works -->
-    <section class="works container">
+    <section id="cases" class="works container">
       <h1>Works</h1>
       <!-- <section class="works-content"> -->
       <div class="wrapper">
@@ -361,7 +392,7 @@
       </div>
     </section>
     <!-- About -->
-    <section class="container about">
+    <section id="about" class="container about">
       <h1>About Us</h1>
       <div class="grid-4">
         <div id="card1" class="grid-card">

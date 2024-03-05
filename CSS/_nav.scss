@@ -130,6 +130,7 @@ nav {
     top: 7%;
 
     img {
+      filter: invert(1);
       width: 3vw;
     }
   }
@@ -150,18 +151,21 @@ nav {
     ul {
       li {
         margin: 4vw 0;
+        scroll-behavior: smooth;
         @include devices(mobile) {
           margin: 7vw 0;
         }
         a {
           @include font28;
           color: $white;
+          scroll-behavior: smooth;
 
           &.active {
             background: $white;
             color: $black;
             padding: 1.5vw 3vw;
             border-radius: 50px;
+            scroll-behavior: smooth;
           }
         }
       }

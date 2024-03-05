@@ -310,6 +310,7 @@ nav .nav_logo a img {
   top: 7%;
 }
 .responsive_nav .close img {
+  filter: invert(1);
   width: 3vw;
 }
 .responsive_nav .resLinks {
@@ -330,6 +331,7 @@ nav .nav_logo a img {
 }
 .responsive_nav .resLinks ul li {
   margin: 4vw 0;
+  scroll-behavior: smooth;
 }
 @media only screen and (max-width: 670px) {
   .responsive_nav .resLinks ul li {
@@ -340,6 +342,7 @@ nav .nav_logo a img {
   font-size: 1.45vw;
   letter-spacing: 0%;
   color: #eee;
+  scroll-behavior: smooth;
 }
 @media only screen and (max-width: 1140px) {
   .responsive_nav .resLinks ul li a {
@@ -361,6 +364,7 @@ nav .nav_logo a img {
   color: #111;
   padding: 1.5vw 3vw;
   border-radius: 50px;
+  scroll-behavior: smooth;
 }
 .responsive_nav .resLinks .social {
   margin-top: 5.2vw;

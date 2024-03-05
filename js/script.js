@@ -1,4 +1,4 @@
-// underline
+//================================================== underline links on hover
 document.querySelectorAll(".nav-item ").forEach((item) => {
   item.addEventListener("mouseover", (event) => {
     event.target.classList.add("hovered");
@@ -9,7 +9,7 @@ document.querySelectorAll(".nav-item ").forEach((item) => {
   });
 });
 
-// cursor
+//================================================== Cursor
 
 var circle = document.querySelector("#cursor");
 var frames = document.querySelectorAll("#frame");
@@ -23,8 +23,8 @@ window.addEventListener("mousemove", function (dets) {
   });
 });
 
-// text reveal on section
-// text reveal on section
+//================================================== text reveal on section
+
 const options = {
   root: null,
   rootMargin: "0px",
@@ -64,7 +64,8 @@ totalSection.forEach((elem) => {
   observer.observe(elem);
 });
 
-// parallax scroll for .render
+//================================================== parallax scroll mobile  .render
+
 const iphoneWrappers = document.querySelectorAll(".iphone-wrapper");
 
 const intersectionObserver = new IntersectionObserver(
@@ -98,7 +99,7 @@ iphoneWrappers.forEach((wrapper) => {
   intersectionObserver.observe(wrapper);
 });
 
-// parallax scroll for desktop .render
+//================================================== parallax scroll for desktop .render
 const desktopWrappers = document.querySelectorAll(".desktop-wrapper");
 
 const desktopObserver = new IntersectionObserver(
@@ -132,3 +133,43 @@ const desktopObserver = new IntersectionObserver(
 desktopWrappers.forEach((wrapper) => {
   desktopObserver.observe(wrapper);
 });
+
+//================================================== responsive nav
+
+let btn = document.querySelector(".nav_btn .button");
+let navcnt = document.querySelector(".responsive_nav");
+let close = document.querySelector(".close");
+let overlay = document.querySelector(".overlay");
+let contact = document.querySelector(".contact");
+let btn2 = document.querySelector(".btnc");
+let btn3 = document.querySelector(".btncc");
+let close2 = document.querySelector(".close2");
+
+btn.onclick = function () {
+  navcnt.classList.add("active");
+  overlay.classList.add("active");
+};
+
+close.onclick = function () {
+  navcnt.classList.remove("active");
+  overlay.classList.remove("active");
+};
+
+overlay.onclick = function () {
+  navcnt.classList.remove("active");
+  overlay.classList.remove("active");
+};
+
+btn2.onclick = function () {
+  contact.classList.add("active");
+  navcnt.classList.remove("active");
+  overlay.classList.remove("active");
+};
+
+close2.onclick = function () {
+  contact.classList.remove("active");
+};
+
+btn3.onclick = function () {
+  contact.classList.add("active");
+};
