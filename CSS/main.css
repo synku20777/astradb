@@ -4,35 +4,31 @@
   font-weight: 700;
   src: url(../fonts/NeueHaasDisplayBold.ttf) format("truetype");
 }
-
 @font-face {
   font-family: "NeueHaasDisplayRoman";
   font-style: normal;
   font-weight: 400;
   src: url(../fonts/NeueHaasDisplayRoman.ttf) format("truetype");
 }
-
 @font-face {
   font-family: "NeueHaasDisplayLight";
   font-style: light;
   font-weight: 300;
   src: url(../fonts/NeueHaasDisplayLight.ttf) format("truetype");
 }
-
 @font-face {
   font-family: "FuturaPT";
   font-style: medium;
   font-weight: 450;
   src: url(../fonts/FuturaPTMedium.otf) format("opentype");
 }
-
 /* colors */
 /* fonts */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-font-smoothing: auto;
+  webkit-font-smoothing: auto;
   font-smooth: auto;
 }
 
@@ -53,16 +49,13 @@ a {
   cursor: pointer;
   transition: 0.2s ease;
 }
-
 a img {
   opacity: 0.5;
   transition: 0.2s ease;
 }
-
 a:hover {
   color: #eee;
 }
-
 a:hover img {
   opacity: 1;
 }
@@ -82,7 +75,6 @@ section {
   padding-left: 5.2vw;
   padding-right: 5.2vw;
 }
-
 @media only screen and (max-width: 670px) {
   .container {
     padding-left: 2.6vw;
@@ -107,50 +99,41 @@ section {
   text-wrap: nowrap;
   transition: 0.2s ease;
 }
-
 .button:hover {
   background-color: #eee;
   color: #111;
 }
-
 .button:hover img {
   filter: invert(1);
 }
-
 @media only screen and (max-width: 1140px) {
   .button {
     padding: 1vw 1.5vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .button {
     padding: 1.8vw 3.6vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .button {
     padding: 2vw 4vw;
   }
 }
-
 .button a {
   font-size: 0.9vw;
 }
-
 @media only screen and (max-width: 1140px) {
   .button a {
     font-size: 1.1vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .button a {
     font-size: 1.6vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .button a {
     font-size: 2.6vw;
@@ -170,7 +153,6 @@ section {
   opacity: 0;
   mix-blend-mode: difference;
 }
-
 @media only screen and (max-width: 912px) {
   #cursor {
     display: none;
@@ -188,29 +170,24 @@ nav {
   padding: 2vh 0;
   z-index: 10;
   -webkit-backdrop-filter: blur(1px);
-  backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
   background: linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.0001) 100%);
 }
-
 @media only screen and (max-width: 670px) {
   nav {
     top: 5vw;
   }
 }
-
 nav .nav_logo {
   height: 3.12vw;
 }
-
 nav .nav_logo a {
   height: 100%;
 }
-
 nav .nav_logo a img {
   height: 100%;
   opacity: 1;
 }
-
 @media only screen and (max-width: 670px) {
   nav .nav_logo {
     margin-top: 0vw;
@@ -221,26 +198,22 @@ nav .nav_logo a img {
   height: 3.12vw;
   padding: 0 0.26vw;
 }
-
 @media only screen and (max-width: 1140px) {
   .nav_links {
     height: 3.5vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .nav_links {
     display: none;
   }
 }
-
 .nav_links ul {
   height: 100%;
   display: flex;
   gap: 2.6vw;
   align-items: center;
 }
-
 .nav_links ul li {
   position: relative;
   padding: 0.8vh 0;
@@ -249,44 +222,37 @@ nav .nav_logo a img {
   align-items: center;
   cursor: pointer;
 }
-
 @media only screen and (max-width: 1140px) {
   .nav_links ul li {
     width: 6vw;
     height: 2.9vw;
   }
 }
-
 .nav_links ul li a {
   font-size: 0.9vw;
   letter-spacing: 0.05rem;
   padding: 0 0.6vw;
   color: #d9d9d9;
 }
-
 @media only screen and (max-width: 1140px) {
   .nav_links ul li a {
     font-size: 1.1vw;
     letter-spacing: 0.05rem;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .nav_links ul li a {
     font-size: 1.8vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .nav_links ul li a {
     font-size: 2.6vw;
   }
 }
-
 .nav_links ul li a a:hover {
   color: #eee;
 }
-
 .nav_links ul li a:after {
   content: "";
   position: absolute;
@@ -299,7 +265,6 @@ nav .nav_logo a img {
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
-
 .nav_links ul li a.hovered:after {
   transform: scaleX(1);
   transform-origin: bottom left;
@@ -308,7 +273,6 @@ nav .nav_logo a img {
 .nav_btn {
   display: none;
 }
-
 @media only screen and (max-width: 912px) {
   .nav_btn {
     display: block;
@@ -328,7 +292,6 @@ nav .nav_logo a img {
   opacity: 0;
   transition: all ease 0.5s;
 }
-
 @media only screen and (max-width: 670px) {
   .responsive_nav {
     border-bottom-right-radius: 30px;
@@ -336,24 +299,20 @@ nav .nav_logo a img {
     z-index: 100;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .responsive_nav {
     z-index: 100;
   }
 }
-
 .responsive_nav .close {
   position: absolute;
   right: 7%;
   top: 7%;
 }
-
 .responsive_nav .close img {
   filter: invert(1);
   width: 3vw;
 }
-
 .responsive_nav .resLinks {
   height: 100%;
   display: flex;
@@ -364,50 +323,42 @@ nav .nav_logo a img {
   padding-bottom: 2.6vw;
   padding-top: 15vw;
 }
-
 @media only screen and (max-width: 670px) {
   .responsive_nav .resLinks {
     padding-top: 25vw;
     padding-bottom: 10vw;
   }
 }
-
 .responsive_nav .resLinks ul li {
   margin: 4vw 0;
   scroll-behavior: smooth;
 }
-
 @media only screen and (max-width: 670px) {
   .responsive_nav .resLinks ul li {
     margin: 7vw 0;
   }
 }
-
 .responsive_nav .resLinks ul li a {
   font-size: 1.45vw;
   letter-spacing: 0%;
   color: #eee;
   scroll-behavior: smooth;
 }
-
 @media only screen and (max-width: 1140px) {
   .responsive_nav .resLinks ul li a {
     font-size: 1.7vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .responsive_nav .resLinks ul li a {
     font-size: 2.8vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .responsive_nav .resLinks ul li a {
     font-size: 3.5vw;
   }
 }
-
 .responsive_nav .resLinks ul li a.active {
   background: #eee;
   color: #111;
@@ -415,36 +366,30 @@ nav .nav_logo a img {
   border-radius: 50px;
   scroll-behavior: smooth;
 }
-
 .responsive_nav .resLinks .social {
   margin-top: 5.2vw;
 }
-
 .responsive_nav .resLinks .social p {
   color: #999;
   font-size: 0.9vw;
   letter-spacing: 0.05rem;
 }
-
 @media only screen and (max-width: 1140px) {
   .responsive_nav .resLinks .social p {
     font-size: 1.1vw;
     letter-spacing: 0.05rem;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .responsive_nav .resLinks .social p {
     font-size: 1.8vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .responsive_nav .resLinks .social p {
     font-size: 2.6vw;
   }
 }
-
 .responsive_nav .resLinks .social ul {
   display: flex;
   gap: 5vw;
@@ -464,23 +409,19 @@ nav .nav_logo a img {
   gap: 4rem;
   z-index: 1;
 }
-
 @media only screen and (max-width: 912px) {
   .footer {
     padding-top: 15vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .footer {
     padding-top: 20vw;
   }
 }
-
 .footer .column h2 {
   position: relative;
 }
-
 .footer .column h2::after {
   content: "";
   position: absolute;
@@ -490,66 +431,55 @@ nav .nav_logo a img {
   height: 1px;
   background-color: #999;
 }
-
 .footer .column a {
   display: block;
   margin-top: 1.04vw;
 }
-
 @media only screen and (max-width: 1140px) {
   .footer .column a {
     margin-top: 1.5vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .footer .column a {
     margin-top: 3vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .footer .column a {
     margin-top: 5vw;
   }
 }
-
 .footer .column p {
   margin-top: 1.04vw;
   display: flex;
   align-items: center;
   color: #999;
 }
-
 @media only screen and (max-width: 1140px) {
   .footer .column p {
     margin-top: 1.5vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .footer .column p {
     margin-top: 3vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .footer .column p {
     margin-top: 5vw;
   }
 }
-
 .footer .column p img {
   margin-right: 10px;
   height: 20px;
 }
-
 @media only screen and (max-width: 912px) {
   .footer {
     flex-direction: column;
     gap: 2rem;
   }
-
   .footer .column h2 {
     margin-bottom: 1.5rem;
   }
@@ -561,19 +491,16 @@ nav .nav_logo a img {
   flex-direction: column;
   width: 100vw;
 }
-
 @media only screen and (max-width: 912px) {
   .hero {
     padding-top: 15vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .hero {
     padding-top: 20vw;
   }
 }
-
 .hero h1 {
   margin-top: 5.2vw;
   font-size: 3.75vw;
@@ -581,32 +508,27 @@ nav .nav_logo a img {
   font-weight: 500;
   margin-bottom: 2vw;
 }
-
 @media only screen and (max-width: 912px) {
   .hero h1 {
     margin-top: 7vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .hero h1 {
     margin-top: 12vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .hero h1 {
     font-size: 5.5vw;
     letter-spacing: 0.0375rem;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .hero h1 {
     font-size: 7vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .hero h1 {
     font-size: 2.5vw;
@@ -615,42 +537,35 @@ nav .nav_logo a img {
     line-height: 150%;
   }
 }
-
 @media only screen and (max-width: 670px) and (max-width: 1140px) {
   .hero h1 {
     font-size: 2.8vw;
     letter-spacing: 0%;
   }
 }
-
 @media only screen and (max-width: 670px) and (max-width: 912px) {
   .hero h1 {
     font-size: 3.7vw;
   }
 }
-
 @media only screen and (max-width: 670px) and (max-width: 670px) {
   .hero h1 {
     font-size: 5.5vw;
   }
 }
-
 .hero button {
   margin-top: 5.2vw;
 }
-
 @media only screen and (max-width: 912px) {
   .hero button {
     margin-top: 7vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .hero button {
     margin-top: 12vw;
   }
 }
-
 .hero span {
   border: 1.5px solid #eee;
   border-radius: 50px;
@@ -658,33 +573,28 @@ nav .nav_logo a img {
   display: inline-block;
   font-style: italic;
 }
-
 @media only screen and (max-width: 1140px) {
   .hero span {
     padding: 0.1vw 1.5vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .hero span {
     padding: 0.1vw 2.5vw;
   }
 }
-
 @media only screen and (max-width: 1140px) {
   .hero {
     padding: 14vw 0.26vw 10vw 4vw;
     width: 40rem;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .hero {
     padding: 18vw 0.26vw 10vw 4vw;
     width: 35rem;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .hero {
     padding: 20vw 0.26vw 10vw 4vw;
@@ -697,65 +607,55 @@ nav .nav_logo a img {
   padding-bottom: 4.16vw;
   height: 160vh;
 }
-
 @media only screen and (max-width: 912px) {
   .services {
     padding-top: 15vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services {
     padding-top: 20vw;
   }
 }
-
-.services h1 {
+.services h2 {
   font-family: "FuturaPT", sans-serif, normal;
   font-size: 3.75vw;
   letter-spacing: 0.0375rem;
   font-weight: 500;
 }
-
 @media only screen and (max-width: 912px) {
-  .services h1 {
+  .services h2 {
     font-size: 5.5vw;
     letter-spacing: 0.0375rem;
   }
 }
-
 @media only screen and (max-width: 670px) {
-  .services h1 {
+  .services h2 {
     font-size: 7vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .services {
     height: -moz-min-content;
     height: min-content;
   }
 }
-
 .services .wrapper {
   position: absolute;
   margin-top: 5.2vw;
   display: flex;
   gap: 13.5vw;
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper {
     margin-top: 7vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper {
     margin-top: 12vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper {
     position: static;
@@ -763,13 +663,11 @@ nav .nav_logo a img {
     gap: 5vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper {
     gap: 7vw;
   }
 }
-
 .services .wrapper h3 {
   font-family: "FuturaPT", sans-serif, normal;
   font-size: 2.5vw;
@@ -777,26 +675,22 @@ nav .nav_logo a img {
   font-weight: 400;
   line-height: 150%;
 }
-
 @media only screen and (max-width: 1140px) {
   .services .wrapper h3 {
     font-size: 2.8vw;
     letter-spacing: 0%;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper h3 {
     font-size: 3.7vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper h3 {
     font-size: 5.5vw;
   }
 }
-
 .services .wrapper p {
   margin-top: 1.04vw;
   font-size: 1.16vw;
@@ -804,121 +698,100 @@ nav .nav_logo a img {
   line-height: 150%;
   width: 95%;
 }
-
 @media only screen and (max-width: 1140px) {
   .services .wrapper p {
     margin-top: 1.5vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper p {
     margin-top: 3vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper p {
     margin-top: 5vw;
   }
 }
-
 @media only screen and (max-width: 1140px) {
   .services .wrapper p {
     letter-spacing: 0%;
     font-size: 1.2vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper p {
     font-size: 2vw;
     letter-spacing: 0%;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper p {
     font-size: 3vw;
   }
 }
-
 @media only screen and (max-width: 1140px) {
   .services .wrapper p {
     width: 60%;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper p {
     width: 100%;
   }
 }
-
 .services .wrapper button {
   margin-top: 2.6vw;
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper button {
     margin-top: 5.2vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper button {
     margin-top: 8vw;
   }
 }
-
 .services .wrapper span {
   color: #999;
 }
-
 .services .wrapper ul {
   margin-top: 1.04vw;
 }
-
 @media only screen and (max-width: 1140px) {
   .services .wrapper ul {
     margin-top: 1.5vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper ul {
     margin-top: 3vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper ul {
     margin-top: 5vw;
   }
 }
-
 .services .wrapper ul li {
   margin: 0.15vw 0;
 }
-
 @media only screen and (max-width: 1140px) {
   .services .wrapper ul li {
     margin: 0.5vw 0;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper ul li {
     margin: 1vw 0;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper ul li {
     margin: 2vw 0;
   }
 }
-
 .services .wrapper .wrapper_left {
   position: sticky;
   display: block;
@@ -928,149 +801,124 @@ nav .nav_logo a img {
   height: 100%;
   top: 100px;
 }
-
 @media only screen and (max-width: 1140px) {
   .services .wrapper .wrapper_left {
     font-size: 1.1vw;
     letter-spacing: 0.05rem;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper .wrapper_left {
     font-size: 1.8vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper .wrapper_left {
     font-size: 2.6vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper .wrapper_left {
     width: 100%;
     position: static;
   }
 }
-
 .services .wrapper .wrapper_right {
   position: static;
   display: block;
   width: 80%;
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper .wrapper_right {
     width: 100%;
   }
 }
-
 .services .wrapper .wrapper_right h3 {
   font-size: 1.45vw;
   letter-spacing: 0%;
 }
-
 @media only screen and (max-width: 1140px) {
   .services .wrapper .wrapper_right h3 {
     font-size: 1.7vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper .wrapper_right h3 {
     font-size: 2.8vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper .wrapper_right h3 {
     font-size: 3.5vw;
   }
 }
-
 .services .wrapper .wrapper_right h3 span {
   font-family: "NeueHaasDisplayRoman", sans-serif, normal;
   color: #eee;
 }
-
-.services .wrapper .wrapper_right .service>div:nth-child(n+2) {
+.services .wrapper .wrapper_right .service > div:nth-child(n+2) {
   margin-top: 5.2vw;
 }
-
 @media only screen and (max-width: 912px) {
-  .services .wrapper .wrapper_right .service>div:nth-child(n+2) {
+  .services .wrapper .wrapper_right .service > div:nth-child(n+2) {
     margin-top: 7vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
-  .services .wrapper .wrapper_right .service>div:nth-child(n+2) {
+  .services .wrapper .wrapper_right .service > div:nth-child(n+2) {
     margin-top: 12vw;
   }
 }
-
-.services .wrapper .wrapper_right .service>div {
+.services .wrapper .wrapper_right .service > div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 @media only screen and (max-width: 912px) {
-  .services .wrapper .wrapper_right .service>div {
+  .services .wrapper .wrapper_right .service > div {
     margin-top: 5.2vw;
     width: 100%;
   }
 }
-
 @media only screen and (max-width: 912px) and (max-width: 912px) {
-  .services .wrapper .wrapper_right .service>div {
+  .services .wrapper .wrapper_right .service > div {
     margin-top: 7vw;
   }
 }
-
 @media only screen and (max-width: 912px) and (max-width: 670px) {
-  .services .wrapper .wrapper_right .service>div {
+  .services .wrapper .wrapper_right .service > div {
     margin-top: 12vw;
   }
 }
-
-.services .wrapper .wrapper_right .service>div h3 {
+.services .wrapper .wrapper_right .service > div h3 {
   font-size: 1.45vw;
   letter-spacing: 0%;
 }
-
 @media only screen and (max-width: 1140px) {
-  .services .wrapper .wrapper_right .service>div h3 {
+  .services .wrapper .wrapper_right .service > div h3 {
     font-size: 1.7vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
-  .services .wrapper .wrapper_right .service>div h3 {
+  .services .wrapper .wrapper_right .service > div h3 {
     font-size: 2.8vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
-  .services .wrapper .wrapper_right .service>div h3 {
+  .services .wrapper .wrapper_right .service > div h3 {
     font-size: 3.5vw;
   }
 }
-
-.services .wrapper .wrapper_right .service>div h3 span {
+.services .wrapper .wrapper_right .service > div h3 span {
   font-family: "NeueHaasDisplayRoman", sans-serif, normal;
   color: #eee;
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper .wrapper_right .service {
     flex-direction: column;
     gap: 8vw;
   }
 }
-
 .services .wrapper .wrapper_right .service p {
   margin-top: 1.04vw;
   font-size: 1.16vw;
@@ -1078,100 +926,84 @@ nav .nav_logo a img {
   line-height: 150%;
   width: 95%;
 }
-
 @media only screen and (max-width: 1140px) {
   .services .wrapper .wrapper_right .service p {
     margin-top: 1.5vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper .wrapper_right .service p {
     margin-top: 3vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper .wrapper_right .service p {
     margin-top: 5vw;
   }
 }
-
 @media only screen and (max-width: 1140px) {
   .services .wrapper .wrapper_right .service p {
     letter-spacing: 0%;
     font-size: 1.2vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper .wrapper_right .service p {
     font-size: 2vw;
     letter-spacing: 0%;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper .wrapper_right .service p {
     font-size: 3vw;
   }
 }
-
 @media only screen and (max-width: 1140px) {
   .services .wrapper .wrapper_right .service p {
     width: 60%;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper .wrapper_right .service p {
     width: 100%;
   }
 }
-
 .services .wrapper .wrapper_right .service a {
   margin-top: 1.56vw;
   font-size: 0.9vw;
   letter-spacing: 0.05rem;
 }
-
 @media only screen and (max-width: 1140px) {
   .services .wrapper .wrapper_right .service a {
     margin-top: 2vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper .wrapper_right .service a {
     margin-top: 4vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper .wrapper_right .service a {
     margin-top: 6vw;
   }
 }
-
 @media only screen and (max-width: 1140px) {
   .services .wrapper .wrapper_right .service a {
     font-size: 1.1vw;
     letter-spacing: 0.05rem;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .services .wrapper .wrapper_right .service a {
     font-size: 1.8vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper .wrapper_right .service a {
     font-size: 2.6vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .services .wrapper .wrapper_right .service a {
     width: 100%;
@@ -1188,58 +1020,49 @@ nav .nav_logo a img {
   width: 100%;
   height: 130vh;
 }
-
 @media only screen and (max-width: 912px) {
   .works {
     padding-top: 15vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .works {
     padding-top: 20vw;
   }
 }
-
 @media only screen and (max-width: 1140px) {
   .works {
     font-size: 1.1vw;
     letter-spacing: 0.05rem;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .works {
     font-size: 1.8vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .works {
     font-size: 2.6vw;
   }
 }
-
-.works h1 {
+.works h2 {
   font-family: "FuturaPT", sans-serif, normal;
   font-size: 3.75vw;
   letter-spacing: 0.0375rem;
   font-weight: 500;
 }
-
 @media only screen and (max-width: 912px) {
-  .works h1 {
+  .works h2 {
     font-size: 5.5vw;
     letter-spacing: 0.0375rem;
   }
 }
-
 @media only screen and (max-width: 670px) {
-  .works h1 {
+  .works h2 {
     font-size: 7vw;
   }
 }
-
 .works .wrapper {
   margin-top: 5.2vw;
   position: absolute;
@@ -1249,52 +1072,43 @@ nav .nav_logo a img {
   display: flex;
   gap: 1vw;
 }
-
 @media only screen and (max-width: 912px) {
   .works .wrapper {
     margin-top: 7vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .works .wrapper {
     margin-top: 12vw;
   }
 }
-
 .works .wrapper .wrapper_left {
   font-size: 0.9vw;
-  letter-spacing: 0.05rem;
-  /* For Safari */
+  letter-spacing: 0.05rem; /* For Safari */
   position: sticky;
-  top: 100px;
-  /* Adjust this value as needed */
+  top: 100px; /* Adjust this value as needed */
   display: block;
   min-width: 39%;
   width: 40%;
   height: -moz-min-content;
   height: min-content;
 }
-
 @media only screen and (max-width: 1140px) {
   .works .wrapper .wrapper_left {
     font-size: 1.1vw;
     letter-spacing: 0.05rem;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .works .wrapper .wrapper_left {
     font-size: 1.8vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .works .wrapper .wrapper_left {
     font-size: 2.6vw;
   }
 }
-
 .works .wrapper .wrapper_left h3 {
   font-family: "FuturaPT", sans-serif, normal;
   font-size: 2.5vw;
@@ -1302,78 +1116,66 @@ nav .nav_logo a img {
   font-weight: 400;
   line-height: 150%;
 }
-
 @media only screen and (max-width: 1140px) {
   .works .wrapper .wrapper_left h3 {
     font-size: 2.8vw;
     letter-spacing: 0%;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .works .wrapper .wrapper_left h3 {
     font-size: 3.7vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .works .wrapper .wrapper_left h3 {
     font-size: 5.5vw;
   }
 }
-
 .works .wrapper .wrapper_left p {
   margin-top: 1.04vw;
   font-size: 1.16vw;
   letter-spacing: -0.25px;
   line-height: 150%;
 }
-
 @media only screen and (max-width: 1140px) {
   .works .wrapper .wrapper_left p {
     margin-top: 1.5vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .works .wrapper .wrapper_left p {
     margin-top: 3vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .works .wrapper .wrapper_left p {
     margin-top: 5vw;
   }
 }
-
 @media only screen and (max-width: 1140px) {
   .works .wrapper .wrapper_left p {
     letter-spacing: 0%;
     font-size: 1.2vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .works .wrapper .wrapper_left p {
     font-size: 2vw;
     letter-spacing: 0%;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .works .wrapper .wrapper_left p {
     font-size: 3vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .works .wrapper .wrapper_left {
     width: 100%;
     position: static;
   }
 }
-
 .works .wrapper .wrapper_left .tags {
   margin-top: 1.56vw;
   display: flex;
@@ -1383,25 +1185,21 @@ nav .nav_logo a img {
   align-self: stretch;
   flex-wrap: wrap;
 }
-
 @media only screen and (max-width: 1140px) {
   .works .wrapper .wrapper_left .tags {
     margin-top: 2vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .works .wrapper .wrapper_left .tags {
     margin-top: 4vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .works .wrapper .wrapper_left .tags {
     margin-top: 6vw;
   }
 }
-
 .works .wrapper .wrapper_left .tags .tag {
   font-size: 0.8vw;
   letter-spacing: 0.05rem;
@@ -1417,32 +1215,27 @@ nav .nav_logo a img {
   width: fit-content;
   text-wrap: nowrap;
 }
-
 @media only screen and (max-width: 1140px) {
   .works .wrapper .wrapper_left .tags .tag {
     font-size: 1vw;
     letter-spacing: 0.05rem;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .works .wrapper .wrapper_left .tags .tag {
     font-size: 1.6vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .works .wrapper .wrapper_left .tags .tag {
     font-size: 2.4vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .works .wrapper .wrapper_left .tags .tag {
     padding: 0.8vh 1vh;
   }
 }
-
 .works .wrapper .wrapper_right {
   display: flex;
   position: relative;
@@ -1450,14 +1243,12 @@ nav .nav_logo a img {
   height: 100%;
   gap: 3vw;
 }
-
 .works .wrapper .wrapper_right .frame {
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-min-content;
   height: min-content;
 }
-
 .works .wrapper .wrapper_right .frame .iphone-wrapper {
   position: relative;
   height: -moz-min-content;
@@ -1470,30 +1261,27 @@ nav .nav_logo a img {
   justify-content: center;
   align-items: center;
 }
-
 .works .wrapper .wrapper_right .frame .iphone-wrapper .iphone-frame {
   width: 100%;
   position: relative;
   -o-object-position: center;
-  object-position: center;
+     object-position: center;
   height: -moz-min-content;
   height: min-content;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   image-rendering: auto;
   justify-content: center;
   z-index: 1;
 }
-
 .works .wrapper .wrapper_right .frame .iphone-wrapper .iphone-frame img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   -o-object-position: center;
-  object-position: center;
+     object-position: center;
 }
-
 .works .wrapper .wrapper_right .frame .iphone-wrapper .render {
   overflow: hidden;
   border-radius: 2vh;
@@ -1501,17 +1289,15 @@ nav .nav_logo a img {
   position: absolute;
   top: 11px;
 }
-
 .works .wrapper .wrapper_right .frame .iphone-wrapper .render img {
   border-radius: 1vh;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   -o-object-position: center;
-  object-position: center;
+     object-position: center;
 }
-
 .works .wrapper .wrapper_right .frame .desktop-wrapper {
   position: relative;
   height: -moz-min-content;
@@ -1525,57 +1311,50 @@ nav .nav_logo a img {
   align-items: center;
   padding-top: 6vw;
 }
-
 .works .wrapper .wrapper_right .frame .desktop-wrapper .desktop-frame {
   width: 100%;
   position: relative;
   -o-object-position: center;
-  object-position: center;
+     object-position: center;
   height: -moz-min-content;
   height: min-content;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   image-rendering: auto;
   justify-content: center;
   z-index: 1;
 }
-
 .works .wrapper .wrapper_right .frame .desktop-wrapper .desktop-frame img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   -o-object-position: center;
-  object-position: center;
+     object-position: center;
 }
-
 .works .wrapper .wrapper_right .frame .desktop-wrapper .render {
   max-width: 96%;
   position: absolute;
   height: 100%;
 }
-
 .works .wrapper .wrapper_right .frame .desktop-wrapper .render img {
   border-radius: 1vh;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   -o-object-position: center;
-  object-position: center;
+     object-position: center;
 }
-
 @media only screen and (max-width: 912px) {
   .works .wrapper .wrapper_right .frame .desktop-wrapper {
     width: auto;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .works .wrapper .wrapper_right .frame .desktop-wrapper {
     display: none;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .works .wrapper {
     position: static;
@@ -1583,19 +1362,16 @@ nav .nav_logo a img {
     gap: 5vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .works .wrapper {
     gap: 7vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .works {
     min-height: 160vh;
   }
 }
-
 .works .gradient {
   position: relative;
   align-content: center;
@@ -1607,13 +1383,11 @@ nav .nav_logo a img {
   justify-content: flex-end;
   width: 42%;
 }
-
 .works .gradient .linear-gradient {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #333 100%);
   height: 70%;
   width: 100%;
 }
-
 .works .gradient .text-cover {
   background-color: #333;
   height: 25vh;
@@ -1626,39 +1400,33 @@ nav .nav_logo a img {
   height: -moz-min-content;
   height: min-content;
 }
-
 @media only screen and (max-width: 912px) {
   .about {
     padding-top: 15vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .about {
     padding-top: 20vw;
   }
 }
-
-.about h1 {
+.about h2 {
   font-family: "FuturaPT", sans-serif, normal;
   font-size: 3.75vw;
   letter-spacing: 0.0375rem;
   font-weight: 500;
 }
-
 @media only screen and (max-width: 912px) {
-  .about h1 {
+  .about h2 {
     font-size: 5.5vw;
     letter-spacing: 0.0375rem;
   }
 }
-
 @media only screen and (max-width: 670px) {
-  .about h1 {
+  .about h2 {
     font-size: 7vw;
   }
 }
-
 .about .grid-4 {
   margin-top: 5.2vw;
   grid-template-rows: auto auto;
@@ -1668,19 +1436,16 @@ nav .nav_logo a img {
   grid-row-gap: 1em;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-
 @media only screen and (max-width: 912px) {
   .about .grid-4 {
     margin-top: 7vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .about .grid-4 {
     margin-top: 12vw;
   }
 }
-
 .about .grid-4 .grid-midsection {
   display: flex;
   flex-direction: column;
@@ -1689,7 +1454,6 @@ nav .nav_logo a img {
   grid-area: span 1/span 2/span 1/span 2;
   text-align: center;
 }
-
 .about .grid-4 .grid-midsection h3 {
   font-family: "FuturaPT", sans-serif, normal;
   font-size: 2.5vw;
@@ -1697,72 +1461,60 @@ nav .nav_logo a img {
   font-weight: 400;
   line-height: 150%;
 }
-
 @media only screen and (max-width: 1140px) {
   .about .grid-4 .grid-midsection h3 {
     font-size: 2.8vw;
     letter-spacing: 0%;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .about .grid-4 .grid-midsection h3 {
     font-size: 3.7vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .about .grid-4 .grid-midsection h3 {
     font-size: 5.5vw;
   }
 }
-
 .about .grid-4 .grid-midsection p {
   text-align: center;
   font-size: 1.45vw;
   letter-spacing: 0%;
 }
-
 @media only screen and (max-width: 1140px) {
   .about .grid-4 .grid-midsection p {
     font-size: 1.7vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .about .grid-4 .grid-midsection p {
     font-size: 2.8vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .about .grid-4 .grid-midsection p {
     font-size: 3.5vw;
   }
 }
-
 .about .grid-4 .grid-midsection button {
   margin-top: 2.6vw;
 }
-
 @media only screen and (max-width: 912px) {
   .about .grid-4 .grid-midsection button {
     margin-top: 5.2vw;
   }
 }
-
 @media only screen and (max-width: 670px) {
   .about .grid-4 .grid-midsection button {
     margin-top: 8vw;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .about .grid-4 .grid-midsection {
     grid-area: 1/1/2/2;
   }
 }
-
 .about .grid-4 .grid-card {
   background-color: #333;
   width: 100%;
@@ -1775,14 +1527,12 @@ nav .nav_logo a img {
   display: flex;
   grid-area: span 1/span 1/span 1/span 1;
 }
-
 @media only screen and (max-width: 912px) {
   .about .grid-4 .grid-card {
     min-height: 30vw;
     height: 100%;
   }
 }
-
 @media only screen and (max-width: 912px) {
   .about .grid-4 {
     grid-template-columns: 1fr 1fr;
@@ -1790,16 +1540,13 @@ nav .nav_logo a img {
     grid-auto-columns: 1fr;
     grid-column-gap: 0.38em;
     grid-row-gap: 1em;
-    grid-template-areas: "1 2""3 4""5 6";
+    grid-template-areas: "1 2" "3 4" "5 6";
   }
 }
-
 @media only screen and (max-width: 912px) {
   .about {
     min-height: -moz-min-content;
     min-height: min-content;
     padding-bottom: 0;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
