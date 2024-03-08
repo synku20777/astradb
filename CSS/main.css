@@ -490,6 +490,7 @@ nav .nav_logo a img {
   display: flex;
   flex-direction: column;
   width: 100vw;
+  min-height: 80vh;
 }
 @media only screen and (max-width: 912px) {
   .hero {
@@ -1549,4 +1550,8 @@ nav .nav_logo a img {
     min-height: min-content;
     padding-bottom: 0;
   }
+}
+
+.video {
+  min-height: 20vh;
 }/*# sourceMappingURL=main.css.map */
